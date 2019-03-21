@@ -1,0 +1,38 @@
+-- 7 Billion Humans (2215) --
+-- 12: Unzip --
+
+-- Instructions: "Move the left most data cube one tile up. Move the
+-- next data cube one tile down. Next up. Next down. And so on, like
+-- unzipping a zipper."
+
+-- Available commands: step, pickUp, drop, if, jump, comment
+
+-- Size: 12 commands (challenge 8, shortest known 8)
+-- Best average runtime: 4 seconds (challenge 7, fastest known 4)
+
+
+pickup c
+if w != worker:
+	-- Westernmost worker, adjacent to the wall.
+	step n
+else:
+	-- Once the westernmost worker moves, the workers at the ends of
+	-- the line step in the same direction. Alternate between
+	-- stepping north and south.
+	a:
+	if e != worker or
+	 w != worker:
+		step s
+	else:
+		if e != worker or
+		 w != worker:
+			step n
+		else:
+			jump a
+		endif
+	endif
+endif
+drop
+
+
+-- vim: set autoindent noexpandtab shiftwidth=8:
