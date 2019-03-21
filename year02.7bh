@@ -1,0 +1,18 @@
+-- 7 Billion Humans (2215) --
+-- 2: Welcome, New Employees --
+
+-- Instructions: "Tell your workers to step down one tile, pick up their
+-- green data cube, and drop it again. An excellent workout!"
+
+-- Available commands: step, pickUp, drop
+
+-- Size: 3 commands (challenge 3, shortest known 3)
+-- Best average runtime: 1 second (challenge 2, fastest known 1)
+
+
+step s
+pickup c
+drop
+
+
+-- vim: set autoindent noexpandtab shiftwidth=8:
