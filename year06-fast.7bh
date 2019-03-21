@@ -1,0 +1,23 @@
+-- 7 Billion Humans (2215) --
+-- 6: Little Exterminator 1 --
+
+-- Instructions: "The worker is supposed to go pick up the cube -- fix it!"
+
+-- Available commands: step, pickUp, if, jump
+
+-- Size: 9 commands (challenge 9, shortest known 8)
+-- Best average runtime: 3 seconds (challenge 4, fastest known 3)
+
+
+step s
+step sw
+step sw
+step se
+step e
+step se
+step s
+step s
+pickup c
+
+
+-- vim: set autoindent noexpandtab shiftwidth=8:
