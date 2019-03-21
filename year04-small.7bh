@@ -1,0 +1,19 @@
+-- 7 Billion Humans (2215) --
+-- 4: Long Distance Delivery --
+
+-- Instructions: "Clear the room! All workers and data cubes must fall
+-- into the infinite pits."
+
+-- Available commands: step, pickUp, jump
+
+-- Size: 3 commands (challenge 4, shortest known 3)
+-- Best average runtime: 29 seconds (challenge 7, fastest known 6)
+
+
+a:
+step e
+pickup c
+jump a
+
+
+-- vim: set autoindent noexpandtab shiftwidth=8:
