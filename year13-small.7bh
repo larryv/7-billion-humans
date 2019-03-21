@@ -1,0 +1,31 @@
+-- 7 Billion Humans (2215) --
+-- 13: Injection Sites 2 --
+
+-- Instructions: "Fill the data gaps in each row."
+
+-- Available commands: step, pickUp, drop, if, jump, comment
+
+-- Size: 9 commands (challenge 10, shortest known 9)
+-- Best average runtime: 198 seconds (challenge 55, fastest known 5)
+
+
+-- Zigzag southwards, moving east along the rows with cubes and west
+-- along the empty rows.
+pickup s
+a:
+if w != datacube and
+ c != datacube and
+ e != datacube:
+	step w
+else:
+	step e
+	drop
+endif
+if w == wall or
+ e == wall:
+	step s
+endif
+jump a
+
+
+-- vim: set autoindent noexpandtab shiftwidth=8:
