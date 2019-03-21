@@ -1,0 +1,31 @@
+-- 7 Billion Humans (2215) --
+-- 10: Emergency Escapades --
+
+-- Instructions: "Find your way to the emergency exit! First, make your
+way towards any data cube. Then... If the cube you are on says: 1: step
+up 2: step right 3: step down 4: step left"
+
+-- Available commands: step, if, jump, comment
+
+-- Size: 9 commands (challenge 9, shortest known 7)
+-- Best average runtime: 204 seconds (challenge 25, shortest known 13)
+
+
+a:
+if c == 1:
+	step n
+endif
+if c == 2:
+	step e
+endif
+if c == 3:
+	step s
+endif
+if c == 4 or
+ c == nothing:
+	step w
+endif
+jump a
+
+
+-- vim: set autoindent noexpandtab shiftwidth=8:

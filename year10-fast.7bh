@@ -1,0 +1,59 @@
+-- 7 Billion Humans (2215) --
+-- 10: Emergency Escapades --
+
+-- Instructions: "Find your way to the emergency exit! First, make your
+way towards any data cube. Then... If the cube you are on says: 1: step
+up 2: step right 3: step down 4: step left"
+
+-- Available commands: step, if, jump, comment
+
+-- Size: 33 commands (challenge 9, shortest known 7)
+-- Best average runtime: 13 seconds (challenge 25, fastest known 13)
+
+
+-- One worker "spawns" closer to the data cubes than the other workers
+-- do. Quickly maneuver the other workers to that proximal position by
+-- running to the walls and back out.
+if n == worker:
+	-- Send most workers into the southeast corner.
+	step e
+	step e
+	step e
+	step s
+	step s
+	step s
+	step w
+	step nw
+	step nw
+else:
+	-- Improve flow by keeping the northernmost workers out of the
+	-- logjam in the southeast corner.
+	if n == hole:
+		step e
+		step e
+		step w
+		step w
+		step sw
+	endif
+endif
+
+-- Walk directly to the target hole.
+step w
+step w
+step w
+step w
+step sw
+step s
+step sw
+step w
+step w
+step w
+step nw
+step n
+step n
+step n
+step n
+step nw
+
+
+-- vim: set autoindent noexpandtab shiftwidth=8:
