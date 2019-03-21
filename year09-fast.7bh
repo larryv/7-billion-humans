@@ -1,0 +1,44 @@
+-- 7 Billion Humans (2215) --
+-- 9: Dynamic Angles --
+
+-- Instructions: "Make a diagonal line with the data cubes. The data
+-- cube with no worker above it must remain where it is."
+
+-- Available commands: step, pickUp, drop, if, jump, comment
+
+-- Size: 21 commands (challenge 5, shortest known 5)
+-- Best average runtime: 3 seconds (challenge 6, fastest known 3)
+
+
+step s
+pickup c
+step s
+if e == nothing:
+	-- Rightmost worker
+	step s
+	step s
+	step s
+	step s
+else:
+	if e == nothing:
+		-- 2nd worker from right
+		step s
+		step s
+		step s
+	else:
+		-- 3rd worker from right
+		if e == nothing:
+			step s
+			step s
+		else:
+			-- 4th worker from right
+			if e == nothing:
+				step s
+			endif
+		endif
+	endif
+endif
+drop
+
+
+-- vim: set autoindent noexpandtab shiftwidth=8:
