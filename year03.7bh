@@ -1,0 +1,20 @@
+-- 7 Billion Humans (2215) --
+-- 3: Transport Squad --
+
+-- Instructions: "Command your workers to move the line of data cubes
+-- down by two tiles, so it sits between the two potted plants."
+
+-- Available commands: step, pickUp, drop
+
+-- Size: 5 commands (challenge 5, shortest known 5)
+-- Best average runtime: 2 seconds (challenge 2, fastest known 2)
+
+
+step s
+pickup c
+step s
+step s
+drop
+
+
+-- vim: set autoindent noexpandtab shiftwidth=8:
