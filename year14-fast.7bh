@@ -1,0 +1,20 @@
+-- 7 Billion Humans (2215) --
+-- 14: Intro to Shredding --
+
+-- Instructions: "Shred all the data cubes."
+
+-- Available commands: step, pickUp, drop, giveTo, if, jump, comment
+
+-- Size: 5 commands (challenge 4, shortest known 4)
+-- Best average runtime: 2 seconds (challenge 3, fastest known 2)
+
+
+if s == datacube:
+	pickup s
+	step s
+	step s
+	giveto s
+endif
+
+
+-- vim: set autoindent noexpandtab shiftwidth=8:
