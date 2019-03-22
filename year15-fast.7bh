@@ -1,0 +1,151 @@
+-- 7 Billion Humans (2215) --
+-- 15: Shred Lines --
+
+-- Instructions: "Shred all the cubes!"
+
+-- Available commands: step, pickUp, giveTo, if, jump, end, comment
+
+-- Size: 128 commands (challenge 9, shortest known 8)
+-- Best average runtime: 13 seconds (challenge 23, fastest known 12)
+
+
+if e != worker:
+	-- Easternmost worker
+	step n
+	step n
+	pickup n
+	step s
+	step s
+	giveto s
+	step n
+	step n
+	step n
+	step n
+	pickup n
+	step s
+	step s
+	step s
+	step s
+	giveto s
+	step n
+	step n
+	step n
+	step n
+	step n
+	pickup n
+	step s
+	step s
+	step s
+	step s
+	step s
+	giveto s
+else:
+	if e != worker:
+		-- 2nd easternmost worker
+		step n
+		pickup n
+		step s
+		giveto s
+		step n
+		step n
+		pickup n
+		step s
+		step s
+		giveto s
+		step n
+		step n
+		step n
+		step n
+		pickup n
+		step s
+		step s
+		step s
+		step s
+		giveto s
+	else:
+		if e != worker:
+			-- Center worker
+			step n
+			pickup n
+			step s
+			giveto s
+			step n
+			step n
+			step n
+			pickup n
+			step s
+			step s
+			step s
+			giveto s
+			step n
+			step n
+			step n
+			step n
+			step n
+			pickup n
+			step s
+			step s
+			step s
+			step s
+			step s
+			giveto s
+		else:
+			if e != worker:
+				-- 2nd westernmost worker
+				step n
+				step n
+				pickup n
+				step s
+				step s
+				giveto s
+				step n
+				step n
+				step n
+				pickup n
+				step s
+				step s
+				step s
+				giveto s
+				step n
+				step n
+				step n
+				step n
+				step n
+				pickup n
+				step s
+				step s
+				step s
+				step s
+				step s
+				giveto s
+			else:
+				-- Westernmost worker
+				step n
+				pickup n
+				step s
+				giveto s
+				step n
+				step n
+				step n
+				pickup n
+				step s
+				step s
+				step s
+				giveto s
+				step n
+				step n
+				step n
+				step n
+				pickup n
+				step s
+				step s
+				step s
+				step s
+				giveto s
+			endif
+		endif
+	endif
+endif
+
+
+-- vim: set autoindent noexpandtab shiftwidth=8:

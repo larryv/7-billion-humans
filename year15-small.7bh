@@ -1,0 +1,26 @@
+-- 7 Billion Humans (2215) --
+-- 15: Shred Lines --
+
+-- Instructions: "Shred all the cubes!"
+
+-- Available commands: step, pickUp, giveTo, if, jump, end, comment
+
+-- Size: 8 commands (challenge 9, shortest known 8)
+-- Best average runtime: 25 seconds (challenge 23, fastest known 12)
+
+
+a:
+step n
+if n == datacube:
+	pickup n
+	b:
+	if s != shredder:
+		step s
+		jump b
+	endif
+	giveto s
+endif
+jump a
+
+
+-- vim: set autoindent noexpandtab shiftwidth=8:
