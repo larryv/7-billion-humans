@@ -1,0 +1,28 @@
+-- 7 Billion Humans (2215) --
+-- 33: Data Backup Day --
+
+-- Instructions: "Each worker has a cube on both sides. The bigger
+-- number is corrupt! Overwrite this bigger number with the value of the
+-- smaller number, and place them both back on the floor where they
+-- started."
+
+-- Available commands: step, pickUp, drop, write, nearest, set, if,
+-- jump, end, comment
+
+-- Size: 9 commands (challenge 8, shortest known 8)
+-- Best average runtime: 2 seconds (challenge 3, fastest known 2)
+
+
+if w < e:
+	mem1 = set w
+	step e
+else:
+	mem1 = set e
+	step w
+endif
+pickup c
+write mem1
+drop
+
+
+-- vim: set autoindent noexpandtab shiftwidth=8:
