@@ -1,0 +1,27 @@
+-- 7 Billion Humans (2215) --
+-- 31: Checkerboard Organization --
+
+-- Instructions: "Fill the floor with a checkerboard pattern. It has
+-- already been started for you."
+
+-- Available commands: step, pickUp, drop, takeFrom, nearest, if, jump,
+-- end, comment
+
+-- Size: 8 commands (challenge 7, shortest known 7)
+-- Best average runtime: 86 seconds (challenge 100, fastest known 58)
+
+
+mem1 = nearest printer
+a:
+takefrom mem1
+step w,n,e
+b:
+if c == datacube:
+	step nw,sw,ne,se
+	jump b
+endif
+drop
+jump a
+
+
+-- vim: set autoindent noexpandtab shiftwidth=8:
