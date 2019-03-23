@@ -1,0 +1,26 @@
+-- 7 Billion Humans (2215) --
+-- 29: Biometric Access --
+
+-- Instructions: "Each worker has been assigned their own personal
+-- shredder, which only they may use. Shred all data cubes."
+
+-- Available commands: step, pickUp, drop, giveTo, takeFrom, nearest,
+-- if, jump, end, comment
+
+-- Size: 5 commands (challenge 5, shortest known 5)
+-- Best average runtime: 60 seconds (challenge 61, fastest known 58)
+
+
+mem1 = nearest shredder
+a:
+mem2 = nearest datacube
+pickup mem2
+-- Unlike in Y25, checking whether the data cube has actually been
+-- picked up *slows down* the solution, presumably because the aggregate
+-- overhead of the `if` command is greater than whatever slack time
+-- there is at the end.
+giveto mem1
+jump a
+
+
+-- vim: set autoindent noexpandtab shiftwidth=8:
