@@ -1,0 +1,101 @@
+-- 7 Billion Humans (2215) --
+-- 20: Reverse Line --
+
+-- Instructions: "Reverse the line of data cubes and place the result
+-- back on the floor, in the same location, between the two holes."
+
+-- Available commands: step, pickUp, drop, if, jump, end, comment
+
+-- Size: 64 commands (challenge 9, shortest known 9)
+-- Best average runtime: 5 seconds (challenge 11, fastest known 4)
+
+
+-- Westernmost worker
+if sw != datacube:
+	pickup s
+	step ne
+	step e
+	step e
+	step e
+	step e
+	step se
+	step se
+	drop
+	end
+endif
+
+-- Easternmost worker
+if se != datacube:
+	pickup s
+	step sw
+	step w
+	step w
+	step w
+	step w
+	step w
+	step w
+	drop
+	end
+endif
+
+-- 2nd westernmost worker
+if sw != datacube:
+	pickup s
+	step ne
+	step e
+	step e
+	step se
+	step se
+	drop
+	end
+endif
+
+-- 2nd easternmost worker
+if se != datacube:
+	pickup s
+	step sw
+	step w
+	step w
+	step w
+	step w
+	drop
+	end
+endif
+
+-- 3rd westernmost worker
+if sw != datacube:
+	pickup s
+	step ne
+	step se
+	step se
+	drop
+	end
+endif
+
+-- 3rd easternmost worker
+if se != datacube:
+	step s
+	pickup c
+	step sw
+	step w
+	step nw
+	drop
+	end
+endif
+
+-- Center-west worker
+if sw != datacube:
+	pickup s
+	step se
+	drop
+	end
+endif
+
+-- Center-east worker
+step s
+pickup c
+step w
+drop
+
+
+-- vim: set autoindent noexpandtab shiftwidth=8:

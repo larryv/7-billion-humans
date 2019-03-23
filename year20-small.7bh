@@ -1,0 +1,31 @@
+-- 7 Billion Humans (2215) --
+-- 20: Reverse Line --
+
+-- Instructions: "Reverse the line of data cubes and place the result
+-- back on the floor, in the same location, between the two holes."
+
+-- Available commands: step, pickUp, drop, if, jump, end, comment
+
+-- Size: 9 commands (challenge 9, shortest known 9)
+-- Best average runtime: 11 seconds (challenge 11, fastest known 4)
+
+
+-- Form a conga line led by the westernmost worker, who goes to the
+-- eastern hole and drops their cube. The rest of the line follows suit.
+pickup s
+a:
+if sw != hole:
+	step w
+	jump a
+endif
+step s
+b:
+if e == hole or
+ e == datacube:
+	drop
+endif
+step e
+jump b
+
+
+-- vim: set autoindent noexpandtab shiftwidth=8:
