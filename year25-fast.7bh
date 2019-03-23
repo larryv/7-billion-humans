@@ -1,0 +1,26 @@
+-- 7 Billion Humans (2215) --
+-- 25: My First Shredding Memory --
+
+-- Instructions: "Shred all the data cubes."
+
+-- Available commands: pickUp, giveTo, nearest, if, jump, end, comment
+
+-- Size: 7 commands (challenge 5, shortest known 5)
+-- Best average runtime: 132 seconds (challenge 132, fastest known 131)
+
+
+mem1 = nearest shredder
+a:
+mem2 = nearest datacube
+pickup mem2
+if myitem == nothing:
+	-- This happens when another worker nabs the nearest cube, and
+	-- there aren't any left. Instead of heading back to the
+	-- shredder, wrap things up immediately.
+	end
+endif
+giveto mem1
+jump a
+
+
+-- vim: set autoindent noexpandtab shiftwidth=8:
