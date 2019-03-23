@@ -1,0 +1,143 @@
+-- 7 Billion Humans (2215) --
+-- 37: Dangerous Spreadsheeting --
+
+-- Instructions: "Add up the contents of each row and write the result
+-- to the cubes on the right side."
+
+-- Available commands: step, pickUp, drop, write, calc, set, if, jump,
+-- end, comment
+
+-- Size: 98 commands (challenge 13, shortest known 13)
+-- Best average runtime: 17 seconds (challenge 32, fastest known 16)
+
+
+-- Align workers
+step w
+step e
+mem1 = set e
+
+-- Northernmost worker
+if n != worker:
+	step e
+	step e
+	mem1 = calc mem1 + c
+	mem1 = calc mem1 + e
+	step e
+	step e
+	step e
+	step e
+	mem1 = calc mem1 + w
+	mem1 = calc mem1 + c
+	mem1 = calc mem1 + e
+	step e
+	jump a
+endif
+
+-- Southernmost worker
+if s != worker:
+	step e
+	step e
+	step e
+	mem1 = calc mem1 + w
+	mem1 = calc mem1 + c
+	mem1 = calc mem1 + e
+	step e
+	step e
+	step e
+	mem1 = calc mem1 + c
+	mem1 = calc mem1 + e
+	step e
+	jump b
+endif
+
+-- 2nd northernmost worker
+if n != worker:
+	step e
+	step e
+	step se
+	step ne
+	step e
+	mem1 = calc mem1 + w
+	mem1 = calc mem1 + c
+	step se
+	step ne
+	mem1 = calc mem1 + c
+	jump c
+endif
+
+-- 2nd southernmost worker
+if s != worker:
+	step e
+	step e
+	step e
+	mem1 = calc mem1 + c
+	step se
+	step ne
+	step e
+	mem1 = calc mem1 + w
+	mem1 = calc mem1 + c
+	mem1 = calc mem1 + e
+	step e
+	jump d
+endif
+
+-- 3rd northermost worker
+if n != worker:
+	step e
+	step e
+	mem1 = calc mem1 + c
+	mem1 = calc mem1 + e
+	step e
+	step e
+	step e
+	step e
+	mem1 = calc mem1 + w
+	mem1 = calc mem1 + c
+	mem1 = calc mem1 + e
+	step e
+	jump e
+endif
+
+-- 3rd southernmost worker
+if s != worker:
+	step e
+	step se
+	step ne
+	step e
+	mem1 = calc mem1 + w
+	mem1 = calc mem1 + c
+	mem1 = calc mem1 + e
+	step e
+	step e
+	step e
+	mem1 = calc mem1 + c
+	jump f
+endif
+
+-- Center worker
+step e
+step e
+step e
+mem1 = calc mem1 + w
+mem1 = calc mem1 + e
+step e
+step se
+step e
+step ne
+mem1 = calc mem1 + c
+
+-- Record final sums
+a:
+b:
+c:
+d:
+e:
+f:
+step e
+step e
+pickup c
+write mem1
+drop
+
+
+-- vim: set autoindent noexpandtab shiftwidth=8:
