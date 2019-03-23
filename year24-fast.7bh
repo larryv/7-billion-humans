@@ -1,0 +1,33 @@
+-- 7 Billion Humans (2215) --
+-- 24: Budget Brigade 1 --
+
+-- Instructions: "Print and shred at least 50 data cubes. No walking
+-- allowed!"
+
+-- Available commands: giveTo, takeFrom, if, jump, comment
+
+-- Size: 11 commands (challenge 7, shortest known 6)
+-- Best average runtime: 49 seconds (challenge 50, fastest known 47)
+
+
+if s == printer:
+	a:
+	takefrom s
+	giveto e
+	jump a
+endif
+if s == shredder:
+	b:
+	if myitem == datacube:
+		giveto s
+	endif
+	jump b
+endif
+c:
+if myitem == datacube:
+	giveto e
+endif
+jump c
+
+
+-- vim: set autoindent noexpandtab shiftwidth=8:
