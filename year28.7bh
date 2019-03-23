@@ -1,0 +1,19 @@
+-- 7 Billion Humans (2215) --
+-- 28: Neural Pathways --
+
+-- Instructions: "Shred all the data cubes. The solution here is
+-- identical to the solution in the previous room. Try it!"
+
+-- Available commands: pickUp, giveTo, nearest, jump, comment
+
+-- Size: 4 commands (challenge 4, shortest known 4)
+-- Best average runtime: 51 seconds (challenge 51, fastest known 51)
+
+
+mem1 = nearest shredder
+mem2 = nearest datacube
+pickup mem2
+giveto mem1
+
+
+-- vim: set autoindent noexpandtab shiftwidth=8:
