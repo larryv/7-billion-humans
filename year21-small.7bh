@@ -1,0 +1,26 @@
+-- 7 Billion Humans (2215) --
+-- 21: Big Data --
+
+-- Instructions: "All workers must hold a data cube of value 50 or bigger."
+
+-- Available commands: step, pickUp, drop, giveTo, takeFrom, if, jump,
+-- end, comment
+
+-- Size: 6 commands (challenge 8, shortest known 6)
+-- Best average runtime: 34 seconds (challenge 32, fastest known 21)
+
+
+-- Each worker takes cubes from the worker to the south, passing them up
+-- the line. The southernmost worker takes cubes from the printer,
+-- discarding unwanted ones.
+step s
+a:
+takefrom s
+if myitem < 50:
+	giveto sw
+	step e
+endif
+jump a
+
+
+-- vim: set autoindent noexpandtab shiftwidth=8:
