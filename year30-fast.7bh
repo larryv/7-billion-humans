@@ -1,0 +1,116 @@
+-- 7 Billion Humans (2215) --
+-- 30: Fill the Floor --
+
+-- Instructions: "Fill the floor with data cubes!"
+
+-- Available commands: step, pickUp, drop, takeFrom, nearest, if, jump,
+-- end, comment
+
+-- Size: 59 commands (challenge 6, shortest known 5)
+-- Best average runtime: 126 seconds (challenge 170, fastest known 119)
+
+
+mem1 = nearest printer
+
+if w == nothing and
+ e == worker:
+	if n == wall:
+		-- Northwest worker in the nook: Fill the floor starting
+		-- in the northwest corner.
+		a:
+		takefrom mem1
+		step w
+		step w
+		step nw
+		b:
+		if c == datacube:
+			step nw,w,sw,n,s,ne,e,se
+			jump b
+		endif
+		drop
+		jump a
+	endif
+
+	-- Southwest worker in the nook: Fill the floor starting in the
+	-- southwest corner.
+	c:
+	takefrom mem1
+	step sw
+	step sw
+	step w
+	d:
+	if c == datacube:
+		step nw,w,sw,n,s,ne,e,se
+		jump d
+	endif
+	drop
+	jump c
+endif
+
+-- Eastern workers in the nook: Fill the floor starting in the southeast
+-- corner (in the nook).
+if e == wall:
+	e:
+	takefrom mem1
+	step se
+	step se
+	step e
+	step e
+	step e
+	f:
+	if c == datacube:
+		step nw,w,sw,n,s,ne,e,se
+		jump f
+	endif
+	drop
+	jump e
+endif
+
+-- North-center worker in the nook: Fill the floor starting in the
+-- northeast corner.
+if n == wall:
+	g:
+	takefrom mem1
+	step e
+	step e
+	step ne
+	h:
+	if c == datacube:
+		step nw,w,sw,n,s,ne,e,se
+		jump h
+	endif
+	drop
+	jump g
+endif
+
+-- South-center worker in the nook: Fill the floor starting near the
+south wall.
+if s == wall:
+	i:
+	takefrom mem1
+	step se
+	step s
+	j:
+	if c == datacube:
+		step nw,w,sw,n,s,ne,e,se
+		jump j
+	endif
+	drop
+	jump i
+endif
+
+-- Worker who starts off near the printer: Fill the floor starting near
+the north wall.
+k:
+takefrom mem1
+step n
+l:
+step nw,w,sw,n,s,ne,e,se
+if c == datacube:
+	jump l
+endif
+drop
+jump k
+
+
+-- vim: set autoindent noexpandtab shiftwidth=8:
