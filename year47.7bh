@@ -1,0 +1,22 @@
+-- 7 Billion Humans (2215) --
+-- 47: Automated Pleasantries --
+
+-- Instructions: "The 1st worker on the left must tell the 2nd worker in
+-- line 'Morning!'. Then that 2nd person must tell the 3rd person
+-- 'Morning!'...and so on down the line until everyone has been
+-- politely greeted while politely waiting their turn, in order from
+-- left to right."
+
+-- Available commands: tell, listen, if, jump, end, comment
+
+-- Size: 3 commands (challenge 3, shortest known 3)
+-- Best average runtime: 7 seconds (challenge 8, fastest known 7)
+
+
+if w == worker:
+	listenfor morning
+endif
+tell e morning
+
+
+-- vim: set autoindent noexpandtab shiftwidth=8:
