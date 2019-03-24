@@ -1,0 +1,46 @@
+-- 7 Billion Humans (2215) --
+-- 66: Decimal Counter --
+
+-- Instructions: "Make the green display count up to 1,000,0002!
+-- ...starting from 999,981. Each cube represents a single decimal
+-- digit, just like you use in real life. Place these individual digits
+-- on the green sensors, and then have someone step on the big red
+-- button to update the display. A sensor with no cube on it will be
+-- interpreted as a zero."
+
+-- Available commands: step, pickUp, drop, write, calc, set, tell,
+-- listen, if, jump, comment
+
+-- Size: 22 commands (challenge 23, shortest known 19)
+-- Best average runtime: 146 seconds (challenge 120, fastest known 46)
+
+
+step s
+if c == datacube:
+	pickup c
+	step s
+	drop
+	tell everyone go
+	a:
+	listenfor ok
+	pickup c
+	if myitem < 9:
+		mem1 = calc myitem + 1
+		write mem1
+		tell everyone go
+	else:
+		write 0
+		tell w ok
+	endif
+	drop
+	jump a
+endif
+b:
+listenfor go
+step s
+step n
+tell w ok
+jump b
+
+
+-- vim: set autoindent noexpandtab shiftwidth=8:

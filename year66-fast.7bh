@@ -1,0 +1,137 @@
+-- 7 Billion Humans (2215) --
+-- 66: Decimal Counter --
+
+-- Instructions: "Make the green display count up to 1,000,0002!
+-- ...starting from 999,981. Each cube represents a single decimal
+-- digit, just like you use in real life. Place these individual digits
+-- on the green sensors, and then have someone step on the big red
+-- button to update the display. A sensor with no cube on it will be
+-- interpreted as a zero."
+
+-- Available commands: step, pickUp, drop, write, calc, set, tell,
+-- listen, if, jump, comment
+
+-- Size: 110 commands (challenge 23, shortest known 19)
+-- Best average runtime: 76 seconds (challenge 120, fastest known 46)
+
+
+step s
+if s == button:
+	a:
+	listenfor ok
+	step s
+	step n
+	tell everyone go
+	jump a
+endif
+pickup c
+if e != worker:
+	step s
+	drop
+	mem1 = set e
+	b:
+	listenfor go
+	pickup c
+	write 2
+	tell mem1 ok
+	drop
+	listenfor go
+	pickup c
+	write 3
+	tell mem1 ok
+	drop
+	listenfor go
+	pickup c
+	write 4
+	tell mem1 ok
+	drop
+	listenfor go
+	pickup c
+	write 5
+	tell mem1 ok
+	drop
+	listenfor go
+	pickup c
+	write 6
+	tell mem1 ok
+	drop
+	listenfor go
+	pickup c
+	write 7
+	tell mem1 ok
+	drop
+	listenfor go
+	pickup c
+	write 8
+	tell mem1 ok
+	drop
+	listenfor go
+	pickup c
+	write 9
+	tell mem1 ok
+	drop
+	listenfor go
+	pickup c
+	write 0
+	tell mem1 ok
+	drop
+	listenfor go
+	pickup c
+	write 1
+	tell mem1 ok
+	drop
+	jump b
+endif
+if e != worker:
+	mem1 = set myitem
+	step s
+	drop
+	mem1 = set 9
+	c:
+	listenfor go
+	listenfor go
+	listenfor go
+	listenfor go
+	listenfor go
+	listenfor go
+	listenfor go
+	listenfor go
+	listenfor go
+	pickup c
+	write mem1
+	drop
+	listenfor go
+	mem1 = set 0
+	jump c
+endif
+step s
+if myitem == 0:
+	mem1 = set 1
+	tell everyone ok
+endif
+drop
+listenfor go
+listenfor go
+listenfor go
+listenfor go
+listenfor go
+listenfor go
+listenfor go
+listenfor go
+listenfor go
+listenfor go
+listenfor go
+listenfor go
+listenfor go
+listenfor go
+listenfor go
+listenfor go
+listenfor go
+listenfor go
+listenfor go
+pickup c
+write mem1
+drop
+
+
+-- vim: set autoindent noexpandtab shiftwidth=8:
