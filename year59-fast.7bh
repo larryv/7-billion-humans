@@ -1,0 +1,107 @@
+-- 7 Billion Humans (2215) --
+-- 59: Glory Hole --
+
+-- Instructions: "One of the holes in this room is your goal. Each data
+-- cube on the floor indicates its distance (measured in tiles) away
+-- from the special hole. Seek out the glory hole, and dive in."
+
+-- Available commands: step, nearest, calc, set, if, jump, forEachDir,
+-- end, comment
+
+-- Size: 77 commands (challenge 7, shortest known 6)
+-- Best average runtime: 9 seconds (challenge 15, fastest known 8)
+
+if w == wall:
+	step e
+	if n == hole:
+		step se
+	else:
+		step ne
+	endif
+else:
+	if n == wall:
+		if w == hole:
+			step s
+			step s
+		else:
+			if e == hole:
+				step sw
+				step sw
+				step sw
+			else:
+				step sw
+				step sw
+				step s
+			endif
+		endif
+	else:
+		if s == wall:
+			step nw
+			step nw
+			if w == hole:
+				step n
+				step n
+				step ne
+			else:
+				if ne == hole and
+				 sw == hole:
+					step n
+					step n
+					step n
+				else:
+					step nw
+					step nw
+					step nw
+				endif
+			endif
+		else:
+			if e == wall:
+				step sw
+				mem1 = nearest datacube
+				if mem1 == 10:
+					step s
+				endif
+				if mem1 == 11:
+					step s
+					step s
+				endif
+				step sw
+				step w
+				step nw
+				step nw
+				step nw
+				step nw
+				step w
+				step w
+			else:
+				if n == hole:
+					if w == hole:
+						step se
+						step se
+					else:
+						step se
+						step s
+					endif
+					step s
+					step sw
+					step w
+					step nw
+					step nw
+					step nw
+					step nw
+					step w
+					step w
+				else:
+					step ne
+					step ne
+					step n
+				endif
+			endif
+		endif
+	endif
+endif
+mem1 = nearest hole
+step mem1
+
+
+-- vim: set autoindent noexpandtab shiftwidth=8:

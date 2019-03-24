@@ -1,0 +1,28 @@
+-- 7 Billion Humans (2215) --
+-- 59: Glory Hole --
+
+-- Instructions: "One of the holes in this room is your goal. Each data
+-- cube on the floor indicates its distance (measured in tiles) away
+-- from the special hole. Seek out the glory hole, and dive in."
+
+-- Available commands: step, nearest, calc, set, if, jump, forEachDir,
+-- end, comment
+
+-- Size: 6 commands (challenge 7, shortest known 6)
+-- Best average runtime: 48 seconds (challenge 15, fastest known 8)
+
+
+mem1 = set 99
+a:
+mem2 = foreachdir nw,w,sw,n,s,ne,e,se:
+	if c == 1 and
+	 mem2 == hole or
+	 mem2 < mem1:
+		step mem2
+		mem1 = set mem2
+		jump a
+	endif
+endfor
+
+
+-- vim: set autoindent noexpandtab shiftwidth=8:
