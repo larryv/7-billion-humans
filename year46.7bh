@@ -1,0 +1,23 @@
+-- 7 Billion Humans (2215) --
+-- 46: Compulsory Office Romance --
+
+-- Instructions: "Worker on the left, say 'Hi!' to the worker on the
+-- right. Worker on the right, once you've been greeted, please say
+-- 'Hi!' to the worker on the left. Repeat saying 'Hi!' to each other
+-- forever, never interrupting."
+
+-- Available commands: tell, listen, if, jump, comment
+
+-- Size: 4 commands (challenge 7, shortest known 4)
+-- Best average runtime: 6 seconds (challenge 15, fastest known 6)
+
+
+if e == worker:
+	a:
+	tell everyone hi
+endif
+listenfor hi
+jump a
+
+
+-- vim: set autoindent noexpandtab shiftwidth=8:
