@@ -1,0 +1,75 @@
+-- 7 Billion Humans (2215) --
+-- 51: Identify Yourselves --
+
+-- Instructions: "Label the first data cube on the left with '1'. The
+-- next cube '2'. And so on down the line. All cubes must be placed back
+-- on the floor where they came from. To prevent tampering, workers who
+-- touch another worker's data cube will immediately explode."
+
+-- Available commands: step, pickUp, drop, write, calc, set, tell,
+-- listen, if, jump, end, comment
+
+-- Size: 49 commands (challenge 7, shortest known 6)
+-- Best average runtime: 6 seconds (challenge 27, fastest known 6)
+
+
+pickup s
+if w != worker:
+	step s
+	write 1
+	drop
+	end
+endif
+if e != worker:
+	step s
+	write 10
+	drop
+	end
+endif
+if w != worker:
+	step s
+	write 2
+	drop
+	end
+endif
+if e != worker:
+	step s
+	write 9
+	drop
+	end
+endif
+if w != worker:
+	step s
+	write 3
+	drop
+	end
+endif
+if e != worker:
+	step s
+	write 8
+	drop
+	end
+endif
+if w != worker:
+	step s
+	write 4
+	drop
+	end
+endif
+if e != worker:
+	step s
+	write 7
+	drop
+	end
+endif
+if w != worker:
+	step s
+	write 5
+	drop
+	end
+endif
+step s
+write 6
+drop
+
+-- vim: set autoindent noexpandtab shiftwidth=8:
