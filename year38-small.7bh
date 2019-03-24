@@ -1,0 +1,50 @@
+-- 7 Billion Humans (2215) --
+-- 38: Seek and Destroy 3 --
+
+-- Instructions: "Find and shred the smallest data cube in the room."
+
+-- Available commands: step, pickUp, drop, giveTo, takeFrom, nearest,
+-- set, if, jump, end, comment
+
+-- Size: 21 commands (challenge 22, shortest known 17)
+-- Best average runtime: 40 seconds (challenge 33, fastest known 11)
+
+
+if s != shredder:
+	-- Find the smallest cube in the column directly above and bring
+	-- it back to the bottom wall.
+	mem2 = nearest wall
+	a:
+	step n
+	if c == datacube and
+	 mem1 != datacube or
+	 c < mem1:
+		mem1 = set c
+	endif
+	if n != nothing:
+		jump a
+	endif
+	pickup mem1
+	step mem2
+	drop
+else:
+	-- Find the smallest cube in the line against the bottom wall.
+	mem2 = nearest shredder
+	step se
+	b:
+	if e == datacube:
+		if mem1 != datacube or
+		 e < mem1:
+			mem1 = set e
+		endif
+		step e
+	endif
+	if e != hole:
+		jump b
+	endif
+	pickup mem1
+	giveto mem2
+endif
+
+
+-- vim: set autoindent noexpandtab shiftwidth=8:

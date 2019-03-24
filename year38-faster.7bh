@@ -1,0 +1,68 @@
+-- 7 Billion Humans (2215) --
+-- 38: Seek and Destroy 3 --
+
+-- Instructions: "Find and shred the smallest data cube in the room."
+
+-- Available commands: step, pickUp, drop, giveTo, takeFrom, nearest,
+-- set, if, jump, end, comment
+
+-- Size: 37 commands (challenge 22, shortest known 17)
+-- Best average runtime: 15 seconds (challenge 33, fastest known 11)
+
+
+-- This fails a lot. I should annotate this, but I've spent all day on
+-- it and really don't want to see it anymore for now. Perhaps in the
+-- future.
+
+mem1 = nearest shredder
+if s == shredder:
+	giveto mem1
+endif
+mem2 = nearest wall
+mem3 = nearest hole
+step n
+step n
+step n
+mem4 = set s
+if c < mem4:
+	mem4 = set c
+endif
+if n < mem4:
+	mem4 = set n
+endif
+step n
+step n
+step n
+if s < mem4:
+	mem4 = set s
+endif
+if c < mem4:
+	mem4 = set c
+endif
+if n < mem4:
+	mem4 = set n
+endif
+step n
+step n
+if c < mem4:
+	mem4 = set c
+endif
+if n < mem4:
+	mem4 = set n
+endif
+pickup mem4
+step mem2
+a:
+mem2 = nearest worker
+if myitem > mem2:
+	step mem3
+endif
+step mem2
+if w == worker or
+ e == worker:
+	jump a
+endif
+giveto mem1
+
+
+-- vim: set autoindent noexpandtab shiftwidth=8:
