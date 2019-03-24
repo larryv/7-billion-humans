@@ -1,0 +1,83 @@
+-- 7 Billion Humans (2215) --
+-- 63: Defrag Disordered --
+
+-- Instructions: "Remove all the gaps between data cubes, packing it
+-- into as few rows towards the top of the room as possible. The order
+-- of the cubes does not matter."
+
+-- Available commands: step, pickUp, drop, nearest, calc, set, if, jump,
+-- forEachDir, end, comment
+
+-- Size: 64 commands (challenge 28, shortest known 19)
+-- Best average runtime: 8 seconds (challenge 95, fastest known 8)
+
+if w == nothing:
+	step w
+endif
+if w == nothing:
+	step ne
+	step ne
+	pickup c
+	step ne
+	step n
+	step n
+	step n
+	drop
+	step sw
+	pickup s
+	step n
+	step n
+	drop
+else:
+	if w == hole:
+		step n
+		pickup ne
+		step n
+		step n
+		step n
+		step n
+		step n
+		drop
+		step se
+		pickup s
+		drop
+		step e
+		pickup se
+		step n
+		step ne
+		drop
+	else:
+		if w == nothing:
+			step ne
+			step n
+			step n
+			pickup c
+			step n
+			step n
+			step n
+			drop
+			step se
+			step se
+			pickup s
+			step n
+			step ne
+			drop
+		else:
+			step ne
+			step n
+			pickup c
+			step ne
+			step n
+			step n
+			drop
+			step se
+			pickup s
+			step n
+			step n
+			step n
+			drop
+		endif
+	endif
+endif
+
+-- vim: set autoindent noexpandtab shiftwidth=8:
