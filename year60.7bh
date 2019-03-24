@@ -1,0 +1,30 @@
+-- 7 Billion Humans (2215) --
+-- 60: Understaffed Sorting --
+
+-- Instructions: "Arrange the data cubes in order from smallest on the
+left, to biggest on the right."
+
+-- Available commands: step, pickUp, drop, giveTo, takeFrom, set, tell,
+-- listen, if, jump, forEachDir, end, comment
+
+-- Size: 12 commands (challenge 12, shortest known 12)
+-- Best average runtime: 144 seconds (challenge 200, fastest known 155)
+
+
+a:
+step w,e
+if s < sw:
+	pickup sw
+	drop
+	pickup s
+	step sw
+	drop
+	pickup ne
+	step e
+	drop
+	step n
+endif
+jump a
+
+
+-- vim: set autoindent noexpandtab shiftwidth=8:
