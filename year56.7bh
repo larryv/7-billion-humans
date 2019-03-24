@@ -1,0 +1,25 @@
+-- 7 Billion Humans (2215) --
+-- 56: Local Maximums --
+
+-- Instructions: "Pick up and shred the largest data cube in each group."
+
+-- Available commands: step, pickUp, drop, giveTo, write, nearest, calc,
+-- set, if, jump, forEachDir, end, comment
+
+-- Size: 8 commands (challenge 8, shortest known 8)
+-- Best average runtime: 13 seconds (challenge 14, fastest known 13)
+
+
+step w
+step w
+mem1 = foreachdir nw,w,sw,n,s,ne,e,se:
+	if mem1 > mem2:
+		mem2 = set mem1
+	endif
+endfor
+pickup mem2
+mem1 = nearest shredder
+giveto mem1
+
+
+-- vim: set autoindent noexpandtab shiftwidth=8:
