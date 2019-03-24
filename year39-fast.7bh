@@ -1,0 +1,30 @@
+-- 7 Billion Humans (2215) --
+-- 39: Printing Etiquette 1 --
+
+-- Instructions: "We need to increase our awareness of our printing.
+-- Each worker must print exactly 5 data cubes, and place them anywhere
+-- on the floor. And really think about the impact of each one."
+
+-- Available commands: step, pickUp, drop, giveTo, takeFrom, write,
+-- nearest, calc, set, if, jump, end, comment
+
+-- Size: 9 commands (challenge 9, shortest known 7)
+-- Best average runtime: 48 seconds (challenge 55, fastest known 39)
+
+
+mem2 = nearest printer
+a:
+if mem1 < 5:
+	takefrom mem2
+	b:
+	step nw,w,sw,n,s,ne,e,se
+	if c == datacube:
+		jump b
+	endif
+	drop
+	mem1 = calc mem1 + 1
+	jump a
+endif
+
+
+-- vim: set autoindent noexpandtab shiftwidth=8:
