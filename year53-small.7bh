@@ -1,0 +1,34 @@
+-- 7 Billion Humans (2215) --
+-- 53: 100 Cubes on the Floor --
+
+-- Instructions: "Each of the 100 numbers between 0-99 must be
+-- represented somewhere on the floor. Their order or location does not
+-- matter."
+
+-- Available commands: step, pickUp, drop, write, calc, set, tell,
+-- listen, if, jump, end, comment
+
+-- Size: 13 commands (challenge 16, shortest known 9)
+-- Best average runtime: 92 seconds (challenge 80, fastest known 36)
+
+
+a:
+if w != datacube:
+	step w
+	jump a
+endif
+if n != wall:
+	listenfor go
+	mem1 = calc n + 10
+endif
+b:
+pickup w
+write mem1
+tell s go
+step w
+drop
+mem1 = calc mem1 + 1
+jump b
+
+
+-- vim: set autoindent noexpandtab shiftwidth=8:
