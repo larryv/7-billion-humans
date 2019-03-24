@@ -1,0 +1,114 @@
+-- 7 Billion Humans (2215) --
+-- 58: Good Neighbors --
+
+-- Instructions: "Re-arrange the data cubes however you like, as long as
+-- no data cube has more than 3 neighbors."
+
+-- Available commands: step, pickUp, drop, write, nearest, calc, set,
+-- if, jump, forEachDir, end, comment
+
+-- Size: 85 commands (challenge 10, shortest known 5)
+-- Best average runtime: 25 seconds (challenge 175, fastest known 20)
+
+
+a:
+b:
+mem1 = nearest datacube
+pickup mem1
+if myitem != datacube:
+	jump a
+endif
+if myitem == 0:
+	drop
+	end
+endif
+mem2 = nearest wall
+step mem2
+if w == wall:
+	if myitem == 8:
+		step e
+		step e
+		if c == datacube:
+			step e
+			step e
+		endif
+		write 0
+		drop
+	else:
+		write 0
+		drop
+		step e
+		step e
+	endif
+	step e
+	step e
+	step e
+	step e
+else:
+	if n == wall:
+		if myitem == 8:
+			step s
+			step s
+			if c == datacube:
+				step s
+				step s
+			endif
+			write 0
+			drop
+		else:
+			write 0
+			drop
+			step s
+			step s
+		endif
+		step s
+		step s
+		step s
+	else:
+		if e == wall:
+			if myitem == 8:
+				step w
+				step w
+				if c == datacube:
+					step w
+					step w
+				endif
+				write 0
+				drop
+			else:
+				write 0
+				drop
+				step w
+				step w
+			endif
+			step w
+			step w
+			step w
+			step w
+		else:
+			if myitem == 8:
+				step n
+				step n
+				if c == datacube:
+					step n
+					step n
+				endif
+				write 0
+				drop
+			else:
+				write 0
+				drop
+				step n
+				step n
+			endif
+			step n
+			step n
+			step n
+			step n
+		endif
+	endif
+endif
+jump b
+
+
+-- vim: set autoindent noexpandtab shiftwidth=8:
