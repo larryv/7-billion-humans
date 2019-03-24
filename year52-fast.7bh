@@ -1,0 +1,152 @@
+-- 7 Billion Humans (2215) --
+-- 52: The Mode Code --
+
+-- Instructions: "How many times does each number appear in the grid
+-- there in the center of the room? How many 0's are there? How many
+-- 1's? How many 2's? How many 3's, 4's, and 5's? Write your answers on
+-- that row of 6 data cubes at the bottom of the room, and place them
+-- back on the floor. The first cube on the left should say how many 0's
+-- there are. The next cube should say how many 1's, and so on, up to 5.
+-- Do not include the cubes at the bottom of the room in your count,
+-- that row is only for results!"
+
+-- Available commands: step, pickUp, drop, write, nearest, calc, set,
+-- tell, listen, if, jump, end, comment
+
+-- Size: 98 commands (challenge 24, shortest known 19)
+-- Best average runtime: 103 seconds (challenge 158, fastest known 77)
+
+
+pickup s
+mem1 = set myitem
+if w != worker:
+	step n
+	write 0
+	jump a
+endif
+if e != worker:
+	step n
+	write 5
+	jump b
+endif
+if w != worker:
+	step n
+	write 1
+	jump c
+endif
+if e != worker:
+	step n
+	write 4
+	jump d
+endif
+if w != worker:
+	step n
+	write 2
+	jump e
+endif
+step n
+write 3
+a:
+b:
+c:
+d:
+e:
+drop
+step n
+f:
+g:
+if c == mem1:
+	mem2 = calc mem2 + 1
+endif
+step n
+if c == mem1:
+	mem2 = calc mem2 + 1
+endif
+step n
+if c == mem1:
+	mem2 = calc mem2 + 1
+endif
+step n
+if c == mem1:
+	mem2 = calc mem2 + 1
+endif
+step n
+if c == mem1:
+	mem2 = calc mem2 + 1
+endif
+step n
+if c == mem1:
+	mem2 = calc mem2 + 1
+endif
+step n
+if c == mem1:
+	mem2 = calc mem2 + 1
+endif
+if n == mem1:
+	mem2 = calc mem2 + 1
+endif
+if e != datacube:
+	step nw
+	step w
+	step w
+	step w
+	step w
+	step w
+	step sw
+else:
+	step e
+endif
+if n == mem1:
+	mem2 = calc mem2 + 1
+endif
+if c == mem1:
+	mem2 = calc mem2 + 1
+endif
+step s
+if c == mem1:
+	mem2 = calc mem2 + 1
+endif
+step s
+if c == mem1:
+	mem2 = calc mem2 + 1
+endif
+step s
+if c == mem1:
+	mem2 = calc mem2 + 1
+endif
+step s
+if c == mem1:
+	mem2 = calc mem2 + 1
+endif
+step s
+if c == mem1:
+	mem2 = calc mem2 + 1
+endif
+if s == mem1:
+	mem2 = calc mem2 + 1
+endif
+if e != datacube:
+	step s
+	step sw
+	step w
+	step w
+	step w
+	step w
+	step w
+	step nw
+	jump f
+endif
+step se
+if s != datacube or
+ s != mem1:
+	jump g
+endif
+pickup s
+step s
+step s
+step s
+write mem2
+drop
+
+
+-- vim: set autoindent noexpandtab shiftwidth=8:
