@@ -1,0 +1,44 @@
+-- 7 Billion Humans (2215) --
+-- 54: Terrain Leveler --
+
+-- Instructions: "Calculate the average of all the cubes in the room,
+-- and write that value to all the cubes."
+
+-- Available commands: step, pickUp, drop, write, calc, set, tell,
+-- listen, if, jump, end, comment
+
+-- Size: 20 commands (challenge 26, shortest known 11)
+-- Best average runtime: 112 seconds (challenge 90, fastest known 59)
+
+
+a:
+mem1 = calc mem1 + c
+if n != wall:
+	step n
+	jump a
+endif
+if sw == datacube:
+	listenfor ready
+	mem1 = calc mem1 + w
+	if se != datacube:
+		mem1 = calc mem1 / 49
+	endif
+endif
+b:
+pickup s
+c:
+write mem1
+if n == wall and
+ e == worker:
+	tell e ready
+	listenfor go
+	mem1 = set se
+	jump c
+endif
+tell w go
+step s
+drop
+jump b
+
+
+-- vim: set autoindent noexpandtab shiftwidth=8:

@@ -1,0 +1,177 @@
+-- 7 Billion Humans (2215) --
+-- 54: Terrain Leveler --
+
+-- Instructions: "Calculate the average of all the cubes in the room,
+-- and write that value to all the cubes."
+
+-- Available commands: step, pickUp, drop, write, calc, set, tell,
+-- listen, if, jump, end, comment
+
+-- Size: 142 commands (challenge 26, shortest known 11)
+-- Best average runtime: 56 seconds (challenge 90, fastest known 59)
+
+
+step s
+step s
+if w != worker:
+	step n
+	jump a
+endif
+if e != worker:
+	step n
+	mem1 = set 6
+	jump b
+endif
+if w != worker:
+	step n
+	mem1 = set 1
+	jump c
+endif
+if e != worker:
+	step n
+	mem1 = set 5
+	jump d
+endif
+if w != worker:
+	step n
+	mem1 = set 2
+	jump e
+endif
+if e != worker:
+	step n
+	mem1 = set 4
+	jump f
+endif
+step n
+mem1 = set 3
+a:
+b:
+c:
+d:
+e:
+f:
+step n
+step n
+step n
+mem2 = calc mem2 + c
+step n
+mem2 = calc mem2 + c
+step n
+mem2 = calc mem2 + c
+step n
+mem2 = calc mem2 + c
+step n
+mem2 = calc mem2 + c
+step n
+mem2 = calc mem2 + c
+if mem1 == 0:
+	mem3 = set ne
+	step n
+	mem2 = calc mem2 + c
+	pickup c
+	write mem2
+	tell everyone morning
+	listenfor hi
+	write mem3
+endif
+if mem1 == 1:
+	mem3 = set ne
+	step n
+	mem2 = calc mem2 + c
+	listenfor morning
+	mem2 = calc mem2 + w
+	pickup c
+	write mem2
+	tell everyone ready
+	listenfor morning
+	write mem3
+	tell everyone hi
+endif
+if mem1 == 2:
+	mem3 = set ne
+	step n
+	mem2 = calc mem2 + c
+	listenfor ready
+	mem2 = calc mem2 + w
+	pickup c
+	write mem2
+	listenfor coffeetime
+	write mem3
+	tell everyone morning
+endif
+if mem1 == 3:
+	step n
+	mem2 = calc mem2 + c
+	listenfor ok
+	mem2 = calc mem2 + w
+	mem2 = calc mem2 + e
+	mem2 = calc mem2 / 49
+	pickup c
+	write mem2
+	tell everyone coffeetime
+endif
+if mem1 == 4:
+	mem3 = set nw
+	step n
+	mem2 = calc mem2 + c
+	listenfor go
+	mem2 = calc mem2 + e
+	pickup c
+	write mem2
+	tell everyone ok
+	listenfor coffeetime
+	write mem3
+	tell everyone ugh
+endif
+if mem1 == 5:
+	mem3 = set nw
+	step n
+	mem2 = calc mem2 + c
+	listenfor ugh
+	mem2 = calc mem2 + e
+	pickup c
+	write mem2
+	tell everyone go
+	listenfor ugh
+	write mem3
+	tell everyone goodbye
+endif
+if mem1 == 6:
+	mem3 = set nw
+	step n
+	mem2 = calc mem2 + c
+	pickup c
+	write mem2
+	tell everyone ugh
+	listenfor goodbye
+	write mem3
+endif
+mem2 = set myitem
+drop
+step s
+pickup c
+write mem2
+drop
+step s
+pickup c
+write mem2
+drop
+step s
+pickup c
+write mem2
+drop
+step s
+pickup c
+write mem2
+drop
+step s
+pickup c
+write mem2
+drop
+step s
+pickup c
+write mem2
+drop
+
+
+-- vim: set autoindent noexpandtab shiftwidth=8:
