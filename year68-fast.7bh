@@ -1,0 +1,50 @@
+-- 7 Billion Humans (2215) --
+-- 68: Goodbye, Humans! --
+
+-- Instructions: "All workers must exit through the convenient hole at
+-- the bottom of the room. The last worker, and only the last worker,
+-- must say 'Goodbye!'."
+
+-- Available commands: step, nearest, set, tell, listen, if, jump,
+-- forEachDir, end, comment
+
+-- Size: 26 commands (challenge 9, shortest known 7)
+-- Best average runtime: 25 seconds (challenge 50, fastest known 23)
+
+
+if n == wall and
+ w == hole:
+	mem1 = set 1
+endif
+if w == wall:
+	step se
+endif
+if e == hole:
+	step sw
+endif
+step s
+step s
+step s
+step s
+step s
+step s
+step s
+step s
+if e == wall or
+ e == hole:
+	step sw
+	step sw
+	step sw
+	step s
+else:
+	step se
+	step se
+	step se
+endif
+if mem1 == 1:
+	tell everyone goodbye
+endif
+step s
+
+
+-- vim: set autoindent noexpandtab shiftwidth=8:
