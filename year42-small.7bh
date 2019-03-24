@@ -1,0 +1,44 @@
+-- 7 Billion Humans (2215) --
+-- 42: Important Email Organization --
+
+-- Instructions: "Data cubes 0-9 must be sent to the shredder labeled
+-- '0'. Data cubes 10-19 must be sent to the shredder labeled '1'. 20-29
+-- to '2'. Etc. DO NOT PICK UP THE LABELS 0-9 DIRECTLY ABOVE EACH
+-- SHREDDER. THEY WILL EXPLODE."
+
+-- Available commands: step, pickUp, drop, giveTo, takeFrom, nearest,
+-- calc, set, if, jump, end, comment
+
+-- Size: 18 commands (challenge 18, shortest known 15)
+-- Best average runtime: 243 seconds (challenge 200, fastest known 159)
+
+
+mem3 = nearest wall
+a:
+mem2 = nearest datacube
+step mem2
+if s == shredder or
+ c != datacube:
+	jump b
+endif
+pickup c
+mem1 = calc myitem / 10
+mem2 = nearest shredder
+step mem2
+c:
+if mem1 == c:
+	giveto s
+	b:
+	step mem3
+	jump a
+endif
+if mem1 < c:
+	step w
+endif
+if mem1 > c:
+	step e
+endif
+jump c
+
+
+-- vim: set autoindent noexpandtab shiftwidth=8:

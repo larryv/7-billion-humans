@@ -1,0 +1,178 @@
+-- 7 Billion Humans (2215) --
+-- 42: Important Email Organization --
+
+-- Instructions: "Data cubes 0-9 must be sent to the shredder labeled
+-- '0'. Data cubes 10-19 must be sent to the shredder labeled '1'. 20-29
+-- to '2'. Etc. DO NOT PICK UP THE LABELS 0-9 DIRECTLY ABOVE EACH
+-- SHREDDER. THEY WILL EXPLODE."
+
+-- Available commands: step, pickUp, drop, giveTo, takeFrom, nearest,
+-- calc, set, if, jump, end, comment
+
+-- Size: 133 commands (challenge 18, shortest known 15)
+-- Best average runtime: 183 seconds (challenge 200, fastest known 159)
+
+
+if nw == worker:
+	step e
+	step e
+endif
+mem1 = nearest wall
+a:
+b:
+c:
+mem2 = nearest datacube
+step mem2
+if c != datacube:
+	jump a
+endif
+if s == shredder:
+	step mem1
+	jump b
+endif
+pickup c
+mem3 = calc myitem / 10
+mem2 = nearest shredder
+step mem2
+mem2 = set c
+if mem3 < mem2:
+	step n
+	mem4 = calc mem2 - mem3
+	if mem4 == 9:
+		step w
+		step w
+		step w
+		step w
+		step w
+		step w
+		step w
+		step w
+	endif
+	if mem4 == 8:
+		step w
+		step w
+		step w
+		step w
+		step w
+		step w
+		step w
+	endif
+	if mem4 == 7:
+		step w
+		step w
+		step w
+		step w
+		step w
+		step w
+	endif
+	if mem4 == 6:
+		step w
+		step w
+		step w
+		step w
+		step w
+	endif
+	if mem4 == 5:
+		step w
+		step w
+		step w
+		step w
+	endif
+	if mem4 == 4:
+		step w
+		step w
+		step w
+	endif
+	if mem4 == 3:
+		step w
+		step w
+	endif
+	if mem4 == 2:
+		step w
+	endif
+	step sw
+endif
+if mem3 > mem2:
+	step n
+	mem4 = calc mem3 - mem2
+	step se
+	if mem4 == 9:
+		step e
+		step e
+		step e
+		step e
+		step e
+		step e
+		step e
+		step e
+	endif
+	if mem4 == 8:
+		step e
+		step e
+		step e
+		step e
+		step e
+		step e
+		step e
+	endif
+	if mem4 == 7:
+		step e
+		step e
+		step e
+		step e
+		step e
+		step e
+	endif
+	if mem4 == 6:
+		step e
+		step e
+		step e
+		step e
+		step e
+	endif
+	if mem4 == 5:
+		step e
+		step e
+		step e
+		step e
+	endif
+	if mem4 == 4:
+		step e
+		step e
+		step e
+	endif
+	if mem4 == 3:
+		step e
+		step e
+	endif
+	if mem4 == 2:
+		step e
+	endif
+endif
+mem2 = nearest shredder
+giveto mem2
+if c < 3:
+	step ne
+	step ne
+	step ne
+	step n
+	step n
+else:
+	if c < 7:
+		step n
+		step n
+		step n
+		step n
+		step n
+	else:
+		step nw
+		step nw
+		step nw
+		step n
+		step n
+	endif
+endif
+jump c
+
+
+-- vim: set autoindent noexpandtab shiftwidth=8:
