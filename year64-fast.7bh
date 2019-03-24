@@ -1,0 +1,92 @@
+-- 7 Billion Humans (2215) --
+-- 64: Binary Counter --
+
+-- Instructions: "Make the green screen display each of the numbers from
+-- 0 to 15, in order. 1) Place cubes on any or all of the 4 green
+-- sensors. 2) Press the big red button to update the display. Examples:
+-- 0001 = 1, 1000 = 8, 0101 = 5"
+
+-- Available commands: step, pickUp, drop, calc, set, tell, listen, if,
+-- jump, end, comment
+
+-- Size: 65 commands (challenge 17, shortest known 14)
+-- Best average runtime: 24 seconds (challenge 54, fastest known 11)
+
+
+if w == datacube:
+	step s
+	listenfor ok
+	a:
+	step s
+	step n
+	tell everyone go
+	jump a
+endif
+if e != worker:
+	step s
+	pickup c
+	step s
+	b:
+	listenfor go
+	drop
+	listenfor go
+	pickup c
+	jump b
+endif
+if e != worker:
+	step s
+	pickup c
+	step s
+	c:
+	listenfor go
+	listenfor go
+	drop
+	listenfor go
+	listenfor go
+	pickup c
+	jump c
+endif
+if e != worker:
+	step s
+	pickup c
+	step s
+	d:
+	listenfor go
+	listenfor go
+	listenfor go
+	listenfor go
+	drop
+	listenfor go
+	listenfor go
+	listenfor go
+	listenfor go
+	pickup c
+	jump d
+endif
+step s
+pickup c
+step s
+tell everyone ok
+e:
+listenfor go
+listenfor go
+listenfor go
+listenfor go
+listenfor go
+listenfor go
+listenfor go
+listenfor go
+drop
+listenfor go
+listenfor go
+listenfor go
+listenfor go
+listenfor go
+listenfor go
+listenfor go
+listenfor go
+pickup c
+jump e
+
+
+-- vim: set autoindent noexpandtab shiftwidth=8:
