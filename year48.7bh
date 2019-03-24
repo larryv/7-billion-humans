@@ -1,0 +1,25 @@
+-- 7 Billion Humans (2215) --
+-- 48: Community Training Day --
+
+-- Instructions: "Command the instructor to print a cube and shred it.
+-- Once their important demonstration is complete, they should TELL the
+-- students - who are LISTENing very carefully - that they may go ahead
+-- and do the same thing."
+
+-- Available commands: step, pickUp, drop, giveTo, takeFrom, nearest,
+-- set, tell, listen, if, jump, end, comment
+
+-- Size: 6 commands (challenge 6, shortest known 6)
+-- Best average runtime: 6 seconds (challenge 8, fastest known 6)
+
+
+if n != wall:
+	listenfor go
+endif
+mem1 = nearest shredder
+takefrom s
+tell everyone go
+giveto mem1
+
+
+-- vim: set autoindent noexpandtab shiftwidth=8:
