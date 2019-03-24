@@ -1,0 +1,86 @@
+-- 7 Billion Humans (2215) --
+-- 67: Decimal Doubler --
+
+-- Instructions: "Use your decimal counting machine. Starting with the
+-- number 1, display it, and keep doubling it and displaying the result,
+-- until you reach at least 8,388,608."
+
+-- Available commands: step, pickUp, drop, write, calc, set, tell,
+-- listen, if, jump, comment
+
+-- Size: 49 commands (challenge 25, shortest known 21)
+-- Best average runtime: 86 seconds (challenge 250, fastest known 50)
+
+
+step s
+if s == button:
+	a:
+	listenfor go
+	listenfor go
+	listenfor go
+	listenfor go
+	listenfor go
+	listenfor go
+	step s
+	step n
+	tell everyone ok
+	jump a
+endif
+pickup c
+step s
+mem1 = set e
+b:
+tell everyone go
+drop
+listenfor ok
+pickup c
+if mem1 > 4:
+	if myitem == 0 or
+	 myitem == 5:
+		mem2 = set 1
+	else:
+		if myitem == 1 or
+		 myitem == 6:
+			mem2 = set 3
+		else:
+			if myitem == 2 or
+			 myitem == 7:
+				mem2 = set 5
+			else:
+				if myitem == 3 or
+				 myitem == 8:
+					mem2 = set 7
+				else:
+					mem2 = set 9
+				endif
+			endif
+		endif
+	endif
+else:
+	if myitem == 0 or
+	 myitem == 5:
+		mem2 = set 0
+	else:
+		if myitem == 1 or
+		 myitem == 6:
+			mem2 = set 2
+		else:
+			if myitem == 2 or
+			 myitem == 7:
+				mem2 = set 4
+			else:
+				if myitem == 3 or
+				 myitem == 8:
+					mem2 = set 6
+				else:
+					mem2 = set 8
+				endif
+			endif
+		endif
+	endif
+endif
+write mem2
+jump b
+
+
+-- vim: set autoindent noexpandtab shiftwidth=8:

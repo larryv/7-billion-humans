@@ -1,0 +1,51 @@
+-- 7 Billion Humans (2215) --
+-- 67: Decimal Doubler --
+
+-- Instructions: "Use your decimal counting machine. Starting with the
+-- number 1, display it, and keep doubling it and displaying the result,
+-- until you reach at least 8,388,608."
+
+-- Available commands: step, pickUp, drop, write, calc, set, tell,
+-- listen, if, jump, comment
+
+-- Size: 25 commands (challenge 25, shortest known 21)
+-- Best average runtime: 1150 seconds (challenge 250, fastest known 50)
+
+
+step s
+if s == button:
+	a:
+	listenfor go
+	step s
+	step n
+	tell w ok
+	jump a
+endif
+pickup c
+step s
+b:
+drop
+if w == nothing:
+	tell everyone go
+endif
+listenfor ok
+pickup c
+mem1 = calc myitem x 2
+if e != datacube and
+ e >= 0:
+	mem1 = calc mem1 + 1
+endif
+mem2 = calc mem1 - 10
+tell w ok
+if mem2 < 0:
+	write mem1
+else:
+	write mem2
+	listenfor go
+endif
+jump b
+
+
+
+
+-- vim: set autoindent noexpandtab shiftwidth=8:
