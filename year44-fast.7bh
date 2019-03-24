@@ -1,0 +1,93 @@
+-- 7 Billion Humans (2215) --
+-- 44: Unique Fashion Party --
+
+-- Instructions: "Each worker must pick up their cube, and go to the
+-- party room. But only ONE of each cube value may remain, along with
+-- the lucky workers holding those cubes. Anyone holding a redundant
+-- value must dive, with their cube, into an exit hole. Tip: Cube values
+-- are in the range 0-6, inclusive."
+
+-- Available commands: step, pickUp, nearest, calc, set, if, jump, end,
+-- comment
+
+-- Size: 61 commands (challenge 11, shortest known 6)
+-- Best average runtime: 27 seconds (challenge 75, fastest known 22)
+
+
+pickup s
+step e
+step e
+step e
+step e
+step e
+step e
+step e
+step e
+step e
+step s
+step s
+step s
+step s
+step s
+step s
+step s
+step s
+step s
+step e
+step e
+step e
+step e
+if myitem == 6:
+	step e
+	step e
+	step e
+	step e
+	step e
+	step e
+	jump b
+endif
+if myitem == 5:
+	step e
+	step e
+	step e
+	step e
+	step e
+	jump c
+endif
+if myitem == 4:
+	step e
+	step e
+	step e
+	step e
+	jump d
+endif
+if myitem == 3:
+	step e
+	step e
+	step e
+	jump e
+endif
+if myitem == 2:
+	step e
+	step e
+	jump f
+endif
+if myitem == 1:
+	step e
+	jump g
+endif
+b:
+c:
+d:
+e:
+f:
+g:
+step n
+if n == worker:
+	step s
+	step s
+endif
+step n
+
+
+-- vim: set autoindent noexpandtab shiftwidth=8:
