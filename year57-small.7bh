@@ -1,0 +1,38 @@
+-- 7 Billion Humans (2215) --
+-- 57: Neighborly Sweeper --
+
+-- Instructions: "How many neighbors does each data cube have? Make each
+-- data cube display the total number of cubes in the 8 tiles surrounding
+-- it."
+
+-- Available commands: step, pickUp, drop, write, calc, set, tell,
+-- listen, if, jump, forEachDir, end, comment
+
+-- Size: 15 commands (challenge 16, shortest known 9)
+-- Best average runtime: 304 seconds (challenge 100, fastest known 15)
+
+
+if e == wall:
+	listenfor go
+	a:
+	step w
+	if w != wall:
+		jump a
+	endif
+endif
+b:
+step e
+mem2 = set 0
+mem1 = foreachdir nw,w,sw,n,s,ne,e,se:
+	if mem1 == datacube:
+		mem2 = calc mem2 + 1
+	endif
+endfor
+pickup c
+write mem2
+drop
+tell s go
+jump b
+
+
+-- vim: set autoindent noexpandtab shiftwidth=8:
