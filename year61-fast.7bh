@@ -1,0 +1,224 @@
+-- 7 Billion Humans (2215) --
+-- 61: Lazy Pathways --
+
+-- Instructions: "All data cubes must display the minimum number of
+-- tiles the boss would have to walk to get to it."
+
+-- Available commands: step, pickUp, drop, takeFrom, write, nearest,
+-- calc, set, if, jump, forEachDir, end, comment
+
+-- Size: 153 commands (challenge 11, shortest known 7)
+-- Best average runtime: 121 seconds (challenge 250, fastest known 73)
+
+
+step w
+if w != worker:
+	if n == wall:
+		step w
+		step w
+		step w
+		step w
+		step w
+		step w
+		step w
+		jump a
+	endif
+	if n != worker:
+		mem1 = set 1
+		step w
+		step w
+		step nw
+		step w
+		step nw
+		jump b
+	endif
+	if n != worker:
+		mem1 = set 2
+		step w
+		step w
+		step sw
+		step w
+		step nw
+		step nw
+		jump c
+	endif
+	if n != worker:
+		mem1 = set 3
+		d:
+		step w
+		step w
+		step w
+		step w
+		step w
+		step w
+		jump e
+	endif
+	if n != worker:
+		mem1 = set 4
+		jump d
+	endif
+	if n != worker:
+		mem1 = set 5
+		step w
+		step w
+		step w
+		step w
+		step w
+		jump f
+	endif
+	if n != worker:
+		mem1 = set 6
+		step w
+		step w
+		step nw
+		step nw
+		jump g
+	endif
+	mem1 = set 7
+	step w
+	step w
+else:
+	mem1 = set 8
+	h:
+	mem2 = calc mem2 + 1
+	if mem2 < 3:
+		jump h
+	endif
+endif
+a:
+b:
+c:
+e:
+f:
+g:
+i:
+mem2 = nearest datacube
+if mem2 > 1:
+	mem3 = set mem2
+	mem4 = foreachdir nw,w,sw,n,s,ne,e,se:
+		if mem4 == datacube and
+		 mem4 < mem3:
+			mem3 = set mem4
+		endif
+	endfor
+	mem3 = calc mem3 + 1
+	if mem3 < mem2:
+		pickup mem2
+		write mem3
+		drop
+	endif
+endif
+if mem1 == 0:
+	if s == wall:
+		if sw == wall:
+			step w
+		else:
+			step sw
+		endif
+	else:
+		if e == wall:
+			if se == wall:
+				step s
+			else:
+				step se
+			endif
+		else:
+			step e
+		endif
+	endif
+endif
+if mem1 == 1:
+	if n == wall and
+	 w != wall:
+		step w
+	else:
+		step s
+	endif
+endif
+if mem1 == 2:
+	if w == wall:
+		step nw
+	else:
+		if s == wall:
+			step w
+		else:
+			step s
+		endif
+	endif
+endif
+if mem1 == 3:
+	if w == wall:
+		if e == 1:
+			step n
+		else:
+			step s
+		endif
+	else:
+		step w
+	endif
+endif
+if mem1 == 4:
+	if w == wall:
+		if sw == wall:
+			step s
+		else:
+			step sw
+		endif
+	else:
+		if n == wall:
+			if nw == wall:
+				step w
+			else:
+				step nw
+			endif
+		else:
+			if e == wall:
+				if ne == wall:
+					step n
+				else:
+					step ne
+				endif
+			else:
+				step e
+			endif
+		endif
+	endif
+endif
+if mem1 == 5:
+	if w == wall:
+		step n
+	else:
+		if sw == wall:
+			step w
+		else:
+			step s
+		endif
+	endif
+endif
+if mem1 == 6:
+	if n == wall:
+		step w
+	else:
+		if ne == wall:
+			step n
+		else:
+			step sw
+		endif
+	endif
+endif
+if mem1 == 7:
+	if se == wall or
+	 nw == wall or
+	 ne == wall:
+		step w
+	else:
+		step n
+	endif
+endif
+if mem1 == 8:
+	step nw,w,sw,n,s,ne,e,se
+endif
+jump i
+
+
+-- vim: set autoindent noexpandtab shiftwidth=8:

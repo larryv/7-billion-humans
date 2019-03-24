@@ -1,0 +1,28 @@
+-- 7 Billion Humans (2215) --
+-- 61: Lazy Pathways --
+
+-- Instructions: "All data cubes must display the minimum number of
+-- tiles the boss would have to walk to get to it."
+
+-- Available commands: step, pickUp, drop, takeFrom, write, nearest,
+-- calc, set, if, jump, forEachDir, end, comment
+
+-- Size: 9 commands (challenge 11, shortest known 7)
+-- Best average runtime: ?? seconds (challenge 250, fastest known 73)
+
+
+a:
+step nw,w,sw,n,s,ne,e,se
+mem1 = foreachdir nw,w,sw,n,s,ne,e,se:
+	if mem1 == datacube and
+	 mem1 < c:
+		mem2 = calc mem1 + 1
+		pickup c
+		write mem2
+		drop
+	endif
+endfor
+jump a
+
+
+-- vim: set autoindent noexpandtab shiftwidth=8:
