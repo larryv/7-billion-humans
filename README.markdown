@@ -1,4 +1,4 @@
-# *7 Billion Humans* solutions
+# *7 Billion Humans* solutions #
 
 [*7 Billion Humans*][7BH] is a 2018 puzzle video game designed around
 a [concurrent][CONC] [visual programming language][VPL].  Dissatisfied
