@@ -1,15 +1,15 @@
 -- 7 Billion Humans (2215) --
 -- 43: Multiplication Table --
 
--- Instructions: "Fill in the multiplication table, where each cube is
+-- INSTRUCTIONS: "Fill in the multiplication table, where each cube is
 -- the product of the row and column headers. Tip from Management:
 -- Please avoid picking up the row and column headers. They explode."
 
--- Available commands: step, pickUp, drop, giveTo, takeFrom, write,
+-- AVAILABLE COMMANDS: step, pickUp, drop, giveTo, takeFrom, write,
 -- nearest, calc, set, if, jump, end, comment
 
--- Size: 10 commands (challenge 11, shortest known 10)
--- Best average runtime: 55 seconds (challenge 53, fastest known 31)
+-- SIZE: 10 commands (challenge 11, shortest known 10)
+-- BEST AVERAGE RUNTIME: 55 seconds (challenge 53, fastest known 31)
 
 
 a:

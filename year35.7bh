@@ -1,13 +1,13 @@
 -- 7 Billion Humans (2215) --
 -- 35: Intro to Calc for Art Majors --
 
--- Instructions: "Just add 1 to each data cube, and set it back down on
+-- INSTRUCTIONS: "Just add 1 to each data cube, and set it back down on
 -- the ground again."
 
--- Available commands: pickUp, drop, write, calc, set, comment
+-- AVAILABLE COMMANDS: pickUp, drop, write, calc, set, comment
 
--- Size: 4 commands (challenge 4, shortest known 4)
--- Best average runtime: 3 seconds (challenge 4, fastest known 3)
+-- SIZE: 4 commands (challenge 4, shortest known 4)
+-- BEST AVERAGE RUNTIME: 3 seconds (challenge 4, fastest known 3)
 
 
 pickup s

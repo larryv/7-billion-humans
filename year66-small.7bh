@@ -1,18 +1,18 @@
 -- 7 Billion Humans (2215) --
 -- 66: Decimal Counter --
 
--- Instructions: "Make the green display count up to 1,000,0002!
+-- INSTRUCTIONS: "Make the green display count up to 1,000,0002!
 -- ...starting from 999,981. Each cube represents a single decimal
 -- digit, just like you use in real life. Place these individual digits
 -- on the green sensors, and then have someone step on the big red
 -- button to update the display. A sensor with no cube on it will be
 -- interpreted as a zero."
 
--- Available commands: step, pickUp, drop, write, calc, set, tell,
+-- AVAILABLE COMMANDS: step, pickUp, drop, write, calc, set, tell,
 -- listen, if, jump, comment
 
--- Size: 22 commands (challenge 23, shortest known 19)
--- Best average runtime: 146 seconds (challenge 120, fastest known 46)
+-- SIZE: 22 commands (challenge 23, shortest known 19)
+-- BEST AVERAGE RUNTIME: 146 seconds (challenge 120, fastest known 46)
 
 
 step s

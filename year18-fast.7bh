@@ -1,14 +1,14 @@
 -- 7 Billion Humans (2215) --
 -- 18: Uniquely Disposed --
 
--- Instructions: "Shred all data cubes. But remember: Each shredder may
+-- INSTRUCTIONS: "Shred all data cubes. But remember: Each shredder may
 -- be used only once. Anyone who tries to reuse a shredder will be
 -- violently destroyed."
 
--- Available commands: step, pickUp, drop, giveTo, if, jump, end, comment
+-- AVAILABLE COMMANDS: step, pickUp, drop, giveTo, if, jump, end, comment
 
--- Size: 12 commands (challenge 7, shortest known 5)
--- Best average runtime: 7 seconds (challenge 12, fastest known 7)
+-- SIZE: 12 commands (challenge 7, shortest known 5)
+-- BEST AVERAGE RUNTIME: 7 seconds (challenge 12, fastest known 7)
 
 
 -- The tile to the southwest of each worker is on a diagonal with a tile

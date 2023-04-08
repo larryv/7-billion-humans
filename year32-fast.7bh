@@ -1,13 +1,13 @@
 -- 7 Billion Humans (2215) --
 -- 32: Creative Writhing --
 
--- Instructions: "Make all data cubes say '99'."
+-- INSTRUCTIONS: "Make all data cubes say '99'."
 
--- Available commands: step, pickUp, drop, write, nearest, if, jump,
+-- AVAILABLE COMMANDS: step, pickUp, drop, write, nearest, if, jump,
 -- end, comment
 
--- Size: 198 commands (challenge 6, shortest known 5)
--- Best average runtime: 31 seconds (challenge 39, fastest known 31)
+-- SIZE: 198 commands (challenge 6, shortest known 5)
+-- BEST AVERAGE RUNTIME: 31 seconds (challenge 39, fastest known 31)
 
 
 if nw == wall:

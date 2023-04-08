@@ -1,14 +1,14 @@
 -- 7 Billion Humans (2215) --
 -- 60: Understaffed Sorting --
 
--- Instructions: "Arrange the data cubes in order from smallest on the
+-- INSTRUCTIONS: "Arrange the data cubes in order from smallest on the
 left, to biggest on the right."
 
--- Available commands: step, pickUp, drop, giveTo, takeFrom, set, tell,
+-- AVAILABLE COMMANDS: step, pickUp, drop, giveTo, takeFrom, set, tell,
 -- listen, if, jump, forEachDir, end, comment
 
--- Size: 12 commands (challenge 12, shortest known 12)
--- Best average runtime: 144 seconds (challenge 200, fastest known 155)
+-- SIZE: 12 commands (challenge 12, shortest known 12)
+-- BEST AVERAGE RUNTIME: 144 seconds (challenge 200, fastest known 155)
 
 
 a:

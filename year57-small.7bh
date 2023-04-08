@@ -1,15 +1,15 @@
 -- 7 Billion Humans (2215) --
 -- 57: Neighborly Sweeper --
 
--- Instructions: "How many neighbors does each data cube have? Make each
+-- INSTRUCTIONS: "How many neighbors does each data cube have? Make each
 -- data cube display the total number of cubes in the 8 tiles surrounding
 -- it."
 
--- Available commands: step, pickUp, drop, write, calc, set, tell,
+-- AVAILABLE COMMANDS: step, pickUp, drop, write, calc, set, tell,
 -- listen, if, jump, forEachDir, end, comment
 
--- Size: 15 commands (challenge 16, shortest known 9)
--- Best average runtime: 304 seconds (challenge 100, fastest known 15)
+-- SIZE: 15 commands (challenge 16, shortest known 9)
+-- BEST AVERAGE RUNTIME: 304 seconds (challenge 100, fastest known 15)
 
 
 if e == wall:

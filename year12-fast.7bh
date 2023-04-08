@@ -1,14 +1,14 @@
 -- 7 Billion Humans (2215) --
 -- 12: Unzip --
 
--- Instructions: "Move the left most data cube one tile up. Move the
+-- INSTRUCTIONS: "Move the left most data cube one tile up. Move the
 -- next data cube one tile down. Next up. Next down. And so on, like
 -- unzipping a zipper."
 
--- Available commands: step, pickUp, drop, if, jump, comment
+-- AVAILABLE COMMANDS: step, pickUp, drop, if, jump, comment
 
--- Size: 12 commands (challenge 8, shortest known 8)
--- Best average runtime: 4 seconds (challenge 7, fastest known 4)
+-- SIZE: 12 commands (challenge 8, shortest known 8)
+-- BEST AVERAGE RUNTIME: 4 seconds (challenge 7, fastest known 4)
 
 
 pickup c

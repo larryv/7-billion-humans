@@ -1,17 +1,17 @@
 -- 7 Billion Humans (2215) --
 -- 41: Image Decrypter --
 
--- Instructions: "Move each data cube to the LEFT the number of tiles
+-- INSTRUCTIONS: "Move each data cube to the LEFT the number of tiles
 -- listed on each cube. For example, if a cube says '3', it must move to
 -- the left 3 tiles. Since this important birthday message is private,
 -- all workers must then exit the room by stepping into one of the
 -- conveniently placed infinite pit holes. Enjoy!"
 
--- Available commands: step, pickUp, drop, write, nearest, calc, set,
+-- AVAILABLE COMMANDS: step, pickUp, drop, write, nearest, calc, set,
 -- if, jump, comment
 
--- Size: 81 commands (challenge 8, shortest known 8)
--- Best average runtime: 8 seconds (challenge 15, fastest known 7)
+-- SIZE: 81 commands (challenge 8, shortest known 8)
+-- BEST AVERAGE RUNTIME: 8 seconds (challenge 15, fastest known 7)
 
 
 pickup w

@@ -1,15 +1,15 @@
 -- 7 Billion Humans (2215) --
 -- 5: An Important Decision --
 
--- Instructions: "Each worker has a data cube either on their left or
+-- INSTRUCTIONS: "Each worker has a data cube either on their left or
 -- right side. Walk toward that cube and continue walking in that
 -- direction so you fall into the nice safe hole. Any other hole leads
 -- to instant doom."
 
--- Available commands: step, pickUp, drop, if, jump
+-- AVAILABLE COMMANDS: step, pickUp, drop, if, jump
 
--- Size: 5 commands (challenge 5, shortest known 5)
--- Best average runtime: 2 seconds (challenge 3, fastest known 2)
+-- SIZE: 5 commands (challenge 5, shortest known 5)
+-- BEST AVERAGE RUNTIME: 2 seconds (challenge 3, fastest known 2)
 
 
 if w == datacube:

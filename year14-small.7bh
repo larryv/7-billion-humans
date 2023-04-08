@@ -1,12 +1,12 @@
 -- 7 Billion Humans (2215) --
 -- 14: Intro to Shredding --
 
--- Instructions: "Shred all the data cubes."
+-- INSTRUCTIONS: "Shred all the data cubes."
 
--- Available commands: step, pickUp, drop, giveTo, if, jump, comment
+-- AVAILABLE COMMANDS: step, pickUp, drop, giveTo, if, jump, comment
 
--- Size: 4 commands (challenge 4, shortest known 4)
--- Best average runtime: 4 seconds (challenge 3, fastest known 2)
+-- SIZE: 4 commands (challenge 4, shortest known 4)
+-- BEST AVERAGE RUNTIME: 4 seconds (challenge 3, fastest known 2)
 
 
 -- The worker without a cube is sacrificed in the name of brevity. RIP.

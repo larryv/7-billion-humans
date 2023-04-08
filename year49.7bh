@@ -1,15 +1,15 @@
 -- 7 Billion Humans (2215) --
 -- 49: Double Sided Destruction --
 
--- Instructions: "First shred the data cube on the left side. Then the
+-- INSTRUCTIONS: "First shred the data cube on the left side. Then the
 -- data cube on the right side. Then the left, then the right. And so
 -- on, until no data cubes remain."
 
--- Available commands: step, pickUp, drop, giveTo, nearest, set, tell,
+-- AVAILABLE COMMANDS: step, pickUp, drop, giveTo, nearest, set, tell,
 -- listen, if, jump, end, comment
 
--- Size: 7 commands (challenge 7, shortest known 6)
--- Best average runtime: 14 seconds (challenge 17, fastest known 14)
+-- SIZE: 7 commands (challenge 7, shortest known 6)
+-- BEST AVERAGE RUNTIME: 14 seconds (challenge 17, fastest known 14)
 
 
 mem1 = nearest shredder

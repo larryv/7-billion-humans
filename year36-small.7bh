@@ -1,14 +1,14 @@
 -- 7 Billion Humans (2215) --
 -- 36: Seek and Destroy 2 --
 
--- Instructions: "Shred all cubes in each column in order from smallest
+-- INSTRUCTIONS: "Shred all cubes in each column in order from smallest
 -- to biggest."
 
--- Available commands: step, pickUp, drop, giveTo, nearest, set, if,
+-- AVAILABLE COMMANDS: step, pickUp, drop, giveTo, nearest, set, if,
 -- jump, end, comment
 
--- Size: 8 commands (challenge 10, shortest known 8)
--- Best average runtime: 151 seconds (challenge 145, fastest known 69)
+-- SIZE: 8 commands (challenge 10, shortest known 8)
+-- BEST AVERAGE RUNTIME: 151 seconds (challenge 145, fastest known 69)
 
 
 mem2 = nearest shredder

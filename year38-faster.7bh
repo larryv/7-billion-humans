@@ -1,13 +1,13 @@
 -- 7 Billion Humans (2215) --
 -- 38: Seek and Destroy 3 --
 
--- Instructions: "Find and shred the smallest data cube in the room."
+-- INSTRUCTIONS: "Find and shred the smallest data cube in the room."
 
--- Available commands: step, pickUp, drop, giveTo, takeFrom, nearest,
+-- AVAILABLE COMMANDS: step, pickUp, drop, giveTo, takeFrom, nearest,
 -- set, if, jump, end, comment
 
--- Size: 37 commands (challenge 22, shortest known 17)
--- Best average runtime: 15 seconds (challenge 33, fastest known 11)
+-- SIZE: 37 commands (challenge 22, shortest known 17)
+-- BEST AVERAGE RUNTIME: 15 seconds (challenge 33, fastest known 11)
 
 
 -- This fails a lot. I should annotate this, but I've spent all day on

@@ -1,13 +1,13 @@
 -- 7 Billion Humans (2215) --
 -- 20: Reverse Line --
 
--- Instructions: "Reverse the line of data cubes and place the result
+-- INSTRUCTIONS: "Reverse the line of data cubes and place the result
 -- back on the floor, in the same location, between the two holes."
 
--- Available commands: step, pickUp, drop, if, jump, end, comment
+-- AVAILABLE COMMANDS: step, pickUp, drop, if, jump, end, comment
 
--- Size: 64 commands (challenge 9, shortest known 9)
--- Best average runtime: 5 seconds (challenge 11, fastest known 4)
+-- SIZE: 64 commands (challenge 9, shortest known 9)
+-- BEST AVERAGE RUNTIME: 5 seconds (challenge 11, fastest known 4)
 
 
 -- Westernmost worker

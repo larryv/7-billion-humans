@@ -1,14 +1,14 @@
 -- 7 Billion Humans (2215) --
 -- 58: Good Neighbors --
 
--- Instructions: "Re-arrange the data cubes however you like, as long as
+-- INSTRUCTIONS: "Re-arrange the data cubes however you like, as long as
 -- no data cube has more than 3 neighbors."
 
--- Available commands: step, pickUp, drop, write, nearest, calc, set,
+-- AVAILABLE COMMANDS: step, pickUp, drop, write, nearest, calc, set,
 -- if, jump, forEachDir, end, comment
 
--- Size: 85 commands (challenge 10, shortest known 5)
--- Best average runtime: 25 seconds (challenge 175, fastest known 20)
+-- SIZE: 85 commands (challenge 10, shortest known 5)
+-- BEST AVERAGE RUNTIME: 25 seconds (challenge 175, fastest known 20)
 
 
 a:

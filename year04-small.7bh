@@ -1,13 +1,13 @@
 -- 7 Billion Humans (2215) --
 -- 4: Long Distance Delivery --
 
--- Instructions: "Clear the room! All workers and data cubes must fall
+-- INSTRUCTIONS: "Clear the room! All workers and data cubes must fall
 -- into the infinite pits."
 
--- Available commands: step, pickUp, jump
+-- AVAILABLE COMMANDS: step, pickUp, jump
 
--- Size: 3 commands (challenge 4, shortest known 3)
--- Best average runtime: 29 seconds (challenge 7, fastest known 6)
+-- SIZE: 3 commands (challenge 4, shortest known 3)
+-- BEST AVERAGE RUNTIME: 29 seconds (challenge 7, fastest known 6)
 
 
 a:

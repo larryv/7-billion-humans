@@ -1,13 +1,13 @@
 -- 7 Billion Humans (2215) --
 -- 9: Dynamic Angles --
 
--- Instructions: "Make a diagonal line with the data cubes. The data
+-- INSTRUCTIONS: "Make a diagonal line with the data cubes. The data
 -- cube with no worker above it must remain where it is."
 
--- Available commands: step, pickUp, drop, if, jump, comment
+-- AVAILABLE COMMANDS: step, pickUp, drop, if, jump, comment
 
--- Size: 5 commands (challenge 5, shortest known 5)
--- Best average runtime: 5 seconds (challenge 6, fastest known 3)
+-- SIZE: 5 commands (challenge 5, shortest known 5)
+-- BEST AVERAGE RUNTIME: 5 seconds (challenge 6, fastest known 3)
 
 
 pickup s

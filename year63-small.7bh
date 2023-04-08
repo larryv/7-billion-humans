@@ -1,15 +1,15 @@
 -- 7 Billion Humans (2215) --
 -- 63: Defrag Disordered --
 
--- Instructions: "Remove all the gaps between data cubes, packing it
+-- INSTRUCTIONS: "Remove all the gaps between data cubes, packing it
 -- into as few rows towards the top of the room as possible. The order
 -- of the cubes does not matter."
 
--- Available commands: step, pickUp, drop, nearest, calc, set, if, jump,
+-- AVAILABLE COMMANDS: step, pickUp, drop, nearest, calc, set, if, jump,
 -- forEachDir, end, comment
 
--- Size: 27 commands (challenge 28, shortest known 19)
--- Best average runtime: 757 seconds (challenge 95, fastest known 8)
+-- SIZE: 27 commands (challenge 28, shortest known 19)
+-- BEST AVERAGE RUNTIME: 757 seconds (challenge 95, fastest known 8)
 
 
 a:

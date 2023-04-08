@@ -1,13 +1,13 @@
 -- 7 Billion Humans (2215) --
 -- 56: Local Maximums --
 
--- Instructions: "Pick up and shred the largest data cube in each group."
+-- INSTRUCTIONS: "Pick up and shred the largest data cube in each group."
 
--- Available commands: step, pickUp, drop, giveTo, write, nearest, calc,
+-- AVAILABLE COMMANDS: step, pickUp, drop, giveTo, write, nearest, calc,
 -- set, if, jump, forEachDir, end, comment
 
--- Size: 8 commands (challenge 8, shortest known 8)
--- Best average runtime: 13 seconds (challenge 14, fastest known 13)
+-- SIZE: 8 commands (challenge 8, shortest known 8)
+-- BEST AVERAGE RUNTIME: 13 seconds (challenge 14, fastest known 13)
 
 
 step w

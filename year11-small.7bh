@@ -1,12 +1,12 @@
 -- 7 Billion Humans (2215) --
 -- 11: Injection Sites 1 --
 
--- Instructions: "Fill the data gaps in each row. Order does not matter."
+-- INSTRUCTIONS: "Fill the data gaps in each row. Order does not matter."
 
--- Available commands: step, pickUp, drop, if, jump, comment
+-- AVAILABLE COMMANDS: step, pickUp, drop, if, jump, comment
 
--- Size: 5 commands (challenge 5, shortest known 5)
--- Best average runtime: 10 seconds (challenge 7, fastest known 5)
+-- SIZE: 5 commands (challenge 5, shortest known 5)
+-- BEST AVERAGE RUNTIME: 10 seconds (challenge 7, fastest known 5)
 
 
 pickup s

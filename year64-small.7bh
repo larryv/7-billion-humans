@@ -1,16 +1,16 @@
 -- 7 Billion Humans (2215) --
 -- 64: Binary Counter --
 
--- Instructions: "Make the green screen display each of the numbers from
+-- INSTRUCTIONS: "Make the green screen display each of the numbers from
 -- 0 to 15, in order. 1) Place cubes on any or all of the 4 green
 -- sensors. 2) Press the big red button to update the display. Examples:
 -- 0001 = 1, 1000 = 8, 0101 = 5"
 
--- Available commands: step, pickUp, drop, calc, set, tell, listen, if,
+-- AVAILABLE COMMANDS: step, pickUp, drop, calc, set, tell, listen, if,
 -- jump, end, comment
 
--- Size: 17 commands (challenge 17, shortest known 14)
--- Best average runtime: 67 seconds (challenge 54, fastest known 11)
+-- SIZE: 17 commands (challenge 17, shortest known 14)
+-- BEST AVERAGE RUNTIME: 67 seconds (challenge 54, fastest known 11)
 
 
 step s

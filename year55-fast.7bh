@@ -1,15 +1,15 @@
 -- 7 Billion Humans (2215) --
 -- 55: Data Flowers --
 
--- Instructions: "See those groups of data cubes? Add up the values of
+-- INSTRUCTIONS: "See those groups of data cubes? Add up the values of
 -- the data cubes in each group, and write the result in the center of
 -- each one."
 
--- Available commands: step, pickUp, drop, write, calc, set, if, jump,
+-- AVAILABLE COMMANDS: step, pickUp, drop, write, calc, set, if, jump,
 -- forEachDir, end, comment
 
--- Size: 16 commands (challenge 8, shortest known 8)
--- Best average runtime: 21 seconds (challenge 25, fastest known 21)
+-- SIZE: 16 commands (challenge 8, shortest known 8)
+-- BEST AVERAGE RUNTIME: 21 seconds (challenge 25, fastest known 21)
 
 
 pickup s

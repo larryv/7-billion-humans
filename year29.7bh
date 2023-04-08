@@ -1,14 +1,14 @@
 -- 7 Billion Humans (2215) --
 -- 29: Biometric Access --
 
--- Instructions: "Each worker has been assigned their own personal
+-- INSTRUCTIONS: "Each worker has been assigned their own personal
 -- shredder, which only they may use. Shred all data cubes."
 
--- Available commands: step, pickUp, drop, giveTo, takeFrom, nearest,
+-- AVAILABLE COMMANDS: step, pickUp, drop, giveTo, takeFrom, nearest,
 -- if, jump, end, comment
 
--- Size: 5 commands (challenge 5, shortest known 5)
--- Best average runtime: 60 seconds (challenge 61, fastest known 58)
+-- SIZE: 5 commands (challenge 5, shortest known 5)
+-- BEST AVERAGE RUNTIME: 60 seconds (challenge 61, fastest known 58)
 
 
 mem1 = nearest shredder

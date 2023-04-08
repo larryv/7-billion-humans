@@ -1,14 +1,14 @@
 -- 7 Billion Humans (2215) --
 -- 10: Emergency Escapades --
 
--- Instructions: "Find your way to the emergency exit! First, make your
+-- INSTRUCTIONS: "Find your way to the emergency exit! First, make your
 way towards any data cube. Then... If the cube you are on says: 1: step
 up 2: step right 3: step down 4: step left"
 
--- Available commands: step, if, jump, comment
+-- AVAILABLE COMMANDS: step, if, jump, comment
 
--- Size: 33 commands (challenge 9, shortest known 7)
--- Best average runtime: 13 seconds (challenge 25, fastest known 13)
+-- SIZE: 33 commands (challenge 9, shortest known 7)
+-- BEST AVERAGE RUNTIME: 13 seconds (challenge 25, fastest known 13)
 
 
 -- One worker "spawns" closer to the data cubes than the other workers

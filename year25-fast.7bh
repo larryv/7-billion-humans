@@ -1,12 +1,12 @@
 -- 7 Billion Humans (2215) --
 -- 25: My First Shredding Memory --
 
--- Instructions: "Shred all the data cubes."
+-- INSTRUCTIONS: "Shred all the data cubes."
 
--- Available commands: pickUp, giveTo, nearest, if, jump, end, comment
+-- AVAILABLE COMMANDS: pickUp, giveTo, nearest, if, jump, end, comment
 
--- Size: 7 commands (challenge 5, shortest known 5)
--- Best average runtime: 132 seconds (challenge 132, fastest known 131)
+-- SIZE: 7 commands (challenge 5, shortest known 5)
+-- BEST AVERAGE RUNTIME: 132 seconds (challenge 132, fastest known 131)
 
 
 mem1 = nearest shredder

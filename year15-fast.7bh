@@ -1,12 +1,12 @@
 -- 7 Billion Humans (2215) --
 -- 15: Shred Lines --
 
--- Instructions: "Shred all the cubes!"
+-- INSTRUCTIONS: "Shred all the cubes!"
 
--- Available commands: step, pickUp, giveTo, if, jump, end, comment
+-- AVAILABLE COMMANDS: step, pickUp, giveTo, if, jump, end, comment
 
--- Size: 128 commands (challenge 9, shortest known 8)
--- Best average runtime: 13 seconds (challenge 23, fastest known 12)
+-- SIZE: 128 commands (challenge 9, shortest known 8)
+-- BEST AVERAGE RUNTIME: 13 seconds (challenge 23, fastest known 12)
 
 
 if e != worker:

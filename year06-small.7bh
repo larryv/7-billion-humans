@@ -1,12 +1,12 @@
 -- 7 Billion Humans (2215) --
 -- 6: Little Exterminator 1 --
 
--- Instructions: "The worker is supposed to go pick up the cube -- fix it!"
+-- INSTRUCTIONS: "The worker is supposed to go pick up the cube -- fix it!"
 
--- Available commands: step, pickUp, if, jump
+-- AVAILABLE COMMANDS: step, pickUp, if, jump
 
--- Size: 8 commands (challenge 9, shortest known 8)
--- Best average runtime: 25 seconds (challenge 4, fastest known 3)
+-- SIZE: 8 commands (challenge 9, shortest known 8)
+-- BEST AVERAGE RUNTIME: 25 seconds (challenge 4, fastest known 3)
 
 
 -- Use a zigzag path so the worker only has to move in three distinct

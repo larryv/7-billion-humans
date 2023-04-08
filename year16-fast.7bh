@@ -1,13 +1,13 @@
 -- 7 Billion Humans (2215) --
 -- 16: Little Exterminator 2 --
 
--- Instructions: "The workers are supposed to go pick up the data cubes
+-- INSTRUCTIONS: "The workers are supposed to go pick up the data cubes
 -- and shred them. And everyone must survive! Fix this program!"
 
--- Available commands: step, pickUp, drop, giveTo, if, jump, end, comment
+-- AVAILABLE COMMANDS: step, pickUp, drop, giveTo, if, jump, end, comment
 
--- Size: 19 commands (challenge 8, shortest known 6)
--- Best average runtime: 7 seconds (challenge 9, fastest known 7)
+-- SIZE: 19 commands (challenge 8, shortest known 6)
+-- BEST AVERAGE RUNTIME: 7 seconds (challenge 9, fastest known 7)
 
 
 step s

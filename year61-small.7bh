@@ -1,14 +1,14 @@
 -- 7 Billion Humans (2215) --
 -- 61: Lazy Pathways --
 
--- Instructions: "All data cubes must display the minimum number of
+-- INSTRUCTIONS: "All data cubes must display the minimum number of
 -- tiles the boss would have to walk to get to it."
 
--- Available commands: step, pickUp, drop, takeFrom, write, nearest,
+-- AVAILABLE COMMANDS: step, pickUp, drop, takeFrom, write, nearest,
 -- calc, set, if, jump, forEachDir, end, comment
 
--- Size: 9 commands (challenge 11, shortest known 7)
--- Best average runtime: ?? seconds (challenge 250, fastest known 73)
+-- SIZE: 9 commands (challenge 11, shortest known 7)
+-- BEST AVERAGE RUNTIME: ?? seconds (challenge 250, fastest known 73)
 
 
 a:

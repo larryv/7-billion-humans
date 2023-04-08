@@ -1,15 +1,15 @@
 -- 7 Billion Humans (2215) --
 -- 59: Glory Hole --
 
--- Instructions: "One of the holes in this room is your goal. Each data
+-- INSTRUCTIONS: "One of the holes in this room is your goal. Each data
 -- cube on the floor indicates its distance (measured in tiles) away
 -- from the special hole. Seek out the glory hole, and dive in."
 
--- Available commands: step, nearest, calc, set, if, jump, forEachDir,
+-- AVAILABLE COMMANDS: step, nearest, calc, set, if, jump, forEachDir,
 -- end, comment
 
--- Size: 77 commands (challenge 7, shortest known 6)
--- Best average runtime: 9 seconds (challenge 15, fastest known 8)
+-- SIZE: 77 commands (challenge 7, shortest known 6)
+-- BEST AVERAGE RUNTIME: 9 seconds (challenge 15, fastest known 8)
 
 if w == wall:
 	step e

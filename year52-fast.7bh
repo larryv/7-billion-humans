@@ -1,7 +1,7 @@
 -- 7 Billion Humans (2215) --
 -- 52: The Mode Code --
 
--- Instructions: "How many times does each number appear in the grid
+-- INSTRUCTIONS: "How many times does each number appear in the grid
 -- there in the center of the room? How many 0's are there? How many
 -- 1's? How many 2's? How many 3's, 4's, and 5's? Write your answers on
 -- that row of 6 data cubes at the bottom of the room, and place them
@@ -10,11 +10,11 @@
 -- Do not include the cubes at the bottom of the room in your count,
 -- that row is only for results!"
 
--- Available commands: step, pickUp, drop, write, nearest, calc, set,
+-- AVAILABLE COMMANDS: step, pickUp, drop, write, nearest, calc, set,
 -- tell, listen, if, jump, end, comment
 
--- Size: 98 commands (challenge 24, shortest known 19)
--- Best average runtime: 103 seconds (challenge 158, fastest known 77)
+-- SIZE: 98 commands (challenge 24, shortest known 19)
+-- BEST AVERAGE RUNTIME: 103 seconds (challenge 158, fastest known 77)
 
 
 pickup s

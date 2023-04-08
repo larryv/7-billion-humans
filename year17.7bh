@@ -1,13 +1,13 @@
 -- 7 Billion Humans (2215) --
 -- 17: Content Creators --
 
--- Instructions: "You got PRINTERS! They will print out a random data
+-- INSTRUCTIONS: "You got PRINTERS! They will print out a random data
 -- cube each time you use them. Everyone, go try out the new printers!"
 
--- Available commands: pickUp, comment
+-- AVAILABLE COMMANDS: pickUp, comment
 
--- Size: 1 command (challenge 1, shortest known 1)
--- Best average runtime: 2 seconds (challenge 3, fastest known 2)
+-- SIZE: 1 command (challenge 1, shortest known 1)
+-- BEST AVERAGE RUNTIME: 2 seconds (challenge 3, fastest known 2)
 
 
 -- Not much to think about for this one.

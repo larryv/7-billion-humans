@@ -1,16 +1,16 @@
 -- 7 Billion Humans (2215) --
 -- 33: Data Backup Day --
 
--- Instructions: "Each worker has a cube on both sides. The bigger
+-- INSTRUCTIONS: "Each worker has a cube on both sides. The bigger
 -- number is corrupt! Overwrite this bigger number with the value of the
 -- smaller number, and place them both back on the floor where they
 -- started."
 
--- Available commands: step, pickUp, drop, write, nearest, set, if,
+-- AVAILABLE COMMANDS: step, pickUp, drop, write, nearest, set, if,
 -- jump, end, comment
 
--- Size: 8 commands (challenge 8, shortest known 8)
--- Best average runtime: 3 seconds (challenge 3, fastest known 2)
+-- SIZE: 8 commands (challenge 8, shortest known 8)
+-- BEST AVERAGE RUNTIME: 3 seconds (challenge 3, fastest known 2)
 
 
 mem1 = set w

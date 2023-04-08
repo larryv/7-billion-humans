@@ -1,14 +1,14 @@
 -- 7 Billion Humans (2215) --
 -- 50: Cubical Communication --
 
--- Instructions: "Each worker must print and shred 5 documents, but we
+-- INSTRUCTIONS: "Each worker must print and shred 5 documents, but we
 -- have to BE QUIET! No two shredders may run at the same time."
 
--- Available commands: step, giveTo, takeFrom, nearest, calc, set, tell,
+-- AVAILABLE COMMANDS: step, giveTo, takeFrom, nearest, calc, set, tell,
 -- listen, if, jump, end, comment
 
--- Size: 10 commands (challenge 12, shortest known 8)
--- Best average runtime: 107 seconds (challenge 60, fastest known 28)
+-- SIZE: 10 commands (challenge 12, shortest known 8)
+-- BEST AVERAGE RUNTIME: 107 seconds (challenge 60, fastest known 28)
 
 
 mem1 = nearest worker

@@ -1,15 +1,15 @@
 -- 7 Billion Humans (2215) --
 -- 40: Printing Etiquette 2 --
 
--- Instructions: "Once again, each worker must print exactly 5 data
+-- INSTRUCTIONS: "Once again, each worker must print exactly 5 data
 -- cubes. But this time, each worker must label their cubes 1 through 5
 -- (in any order you like). Place them anywhere on the floor."
 
--- Available commands: step, pickUp, drop, giveTo, takeFrom, write,
+-- AVAILABLE COMMANDS: step, pickUp, drop, giveTo, takeFrom, write,
 -- nearest, calc, set, if, jump, end, comment
 
--- Size: 9 commands (challenge 10, shortest known 8)
--- Best average runtime: 79 seconds (challenge 55, fastest known 39)
+-- SIZE: 9 commands (challenge 10, shortest known 8)
+-- BEST AVERAGE RUNTIME: 79 seconds (challenge 55, fastest known 39)
 
 
 mem2 = nearest printer

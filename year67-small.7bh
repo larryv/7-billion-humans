@@ -1,15 +1,15 @@
 -- 7 Billion Humans (2215) --
 -- 67: Decimal Doubler --
 
--- Instructions: "Use your decimal counting machine. Starting with the
+-- INSTRUCTIONS: "Use your decimal counting machine. Starting with the
 -- number 1, display it, and keep doubling it and displaying the result,
 -- until you reach at least 8,388,608."
 
--- Available commands: step, pickUp, drop, write, calc, set, tell,
+-- AVAILABLE COMMANDS: step, pickUp, drop, write, calc, set, tell,
 -- listen, if, jump, comment
 
--- Size: 25 commands (challenge 25, shortest known 21)
--- Best average runtime: 1150 seconds (challenge 250, fastest known 50)
+-- SIZE: 25 commands (challenge 25, shortest known 21)
+-- BEST AVERAGE RUNTIME: 1150 seconds (challenge 250, fastest known 50)
 
 
 step s

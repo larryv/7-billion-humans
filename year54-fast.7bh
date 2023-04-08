@@ -1,14 +1,14 @@
 -- 7 Billion Humans (2215) --
 -- 54: Terrain Leveler --
 
--- Instructions: "Calculate the average of all the cubes in the room,
+-- INSTRUCTIONS: "Calculate the average of all the cubes in the room,
 -- and write that value to all the cubes."
 
--- Available commands: step, pickUp, drop, write, calc, set, tell,
+-- AVAILABLE COMMANDS: step, pickUp, drop, write, calc, set, tell,
 -- listen, if, jump, end, comment
 
--- Size: 142 commands (challenge 26, shortest known 11)
--- Best average runtime: 56 seconds (challenge 90, fastest known 59)
+-- SIZE: 142 commands (challenge 26, shortest known 11)
+-- BEST AVERAGE RUNTIME: 56 seconds (challenge 90, fastest known 59)
 
 
 step s

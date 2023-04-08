@@ -1,14 +1,14 @@
 -- 7 Billion Humans (2215) --
 -- 26: Budget Brigade 2 --
 
--- Instructions: "Shred data cubes of value 50 and higher on the right.
+-- INSTRUCTIONS: "Shred data cubes of value 50 and higher on the right.
 -- Smaller on the left. Shred at least 20 data cubes. No one is allowed
 -- to walk."
 
--- Available commands: giveTo, takeFrom, if, jump, comment
+-- AVAILABLE COMMANDS: giveTo, takeFrom, if, jump, comment
 
--- Size: 25 commands (challenge 10, shortest known 8)
--- Best average runtime: 67 seconds (challenge 70, fastest known 67)
+-- SIZE: 25 commands (challenge 10, shortest known 8)
+-- BEST AVERAGE RUNTIME: 67 seconds (challenge 70, fastest known 67)
 
 
 -- Printer duty

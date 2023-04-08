@@ -1,12 +1,12 @@
 -- 7 Billion Humans (2215) --
 -- 13: Injection Sites 2 --
 
--- Instructions: "Fill the data gaps in each row."
+-- INSTRUCTIONS: "Fill the data gaps in each row."
 
--- Available commands: step, pickUp, drop, if, jump, comment
+-- AVAILABLE COMMANDS: step, pickUp, drop, if, jump, comment
 
--- Size: 9 commands (challenge 10, shortest known 9)
--- Best average runtime: 198 seconds (challenge 55, fastest known 5)
+-- SIZE: 9 commands (challenge 10, shortest known 9)
+-- BEST AVERAGE RUNTIME: 198 seconds (challenge 55, fastest known 5)
 
 
 -- Zigzag southwards, moving east along the rows with cubes and west

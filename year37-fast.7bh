@@ -1,14 +1,14 @@
 -- 7 Billion Humans (2215) --
 -- 37: Dangerous Spreadsheeting --
 
--- Instructions: "Add up the contents of each row and write the result
+-- INSTRUCTIONS: "Add up the contents of each row and write the result
 -- to the cubes on the right side."
 
--- Available commands: step, pickUp, drop, write, calc, set, if, jump,
+-- AVAILABLE COMMANDS: step, pickUp, drop, write, calc, set, if, jump,
 -- end, comment
 
--- Size: 98 commands (challenge 13, shortest known 13)
--- Best average runtime: 17 seconds (challenge 32, fastest known 16)
+-- SIZE: 98 commands (challenge 13, shortest known 13)
+-- BEST AVERAGE RUNTIME: 17 seconds (challenge 32, fastest known 16)
 
 
 -- Align workers
