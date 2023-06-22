@@ -17,4 +17,4 @@ step e
 jump a
 
 
--- vim: set autoindent noexpandtab shiftwidth=8:
+-- vim: set autoindent noexpandtab

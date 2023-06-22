@@ -27,4 +27,4 @@ mem2 = calc mem2 + mem1
 jump b
 
 
--- vim: set autoindent noexpandtab shiftwidth=8:
+-- vim: set autoindent noexpandtab

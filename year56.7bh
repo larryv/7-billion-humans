@@ -22,4 +22,4 @@ mem1 = nearest shredder
 giveto mem1
 
 
--- vim: set autoindent noexpandtab shiftwidth=8:
+-- vim: set autoindent noexpandtab

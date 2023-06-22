@@ -25,4 +25,4 @@ mem2 = foreachdir nw,w,sw,n,s,ne,e,se:
 endfor
 
 
--- vim: set autoindent noexpandtab shiftwidth=8:
+-- vim: set autoindent noexpandtab

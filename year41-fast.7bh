@@ -98,4 +98,4 @@ mem2 = nearest hole
 step mem2
 
 
--- vim: set autoindent noexpandtab shiftwidth=8:
+-- vim: set autoindent noexpandtab
