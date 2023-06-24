@@ -1,2 +1,6 @@
 # Normalize line endings in text files.
 * text=auto
+
+# GitHub thinks the game solutions are roff documents.
+# https://github.com/github-linguist/linguist/blob/c1c34e5/docs/overrides.md
+*.7bh -linguist-detectable
